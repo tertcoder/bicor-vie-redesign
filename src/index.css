@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.linkStyle {
+  @apply text-lg duration-150;
+}
+.linkStyle:hover {
+  @apply text-lg text-primary underline;
+}
+.linkStyle.active {
+  @apply text-lg font-semibold text-primary;
+}
