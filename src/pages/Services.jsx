@@ -59,9 +59,9 @@ export default function Services() {
           </p>
         </div>
         <div className="bg-service-3 flex h-[375px] flex-col items-end justify-between overflow-hidden rounded-b-lg p-4">
-          <div className="w-full p-6 text-2xl italic text-white">
-            <p className="text-end">
-              <p>Votre assurance, notre priorité</p>
+          <div className="w-full px-6 pt-8 text-2xl italic text-white">
+            <p className="text-end font-semibold text-4xl">
+              Votre assurance, notre priorité
             </p>
           </div>
           <div>
