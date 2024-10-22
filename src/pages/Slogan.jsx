@@ -4,8 +4,8 @@ import ArrowIcon from "../assets/arrow.svg";
 export default function Slogan() {
   return (
     <>
-      <div className="mx-auto mt-12 flex w-full max-w-[1240px] items-center justify-between gap-12">
-        <div className="flex-1 space-y-4">
+      <div className="mx-auto my-16 flex w-full max-w-[1240px] items-center justify-between gap-12">
+        <div className="max-w-[572px] space-y-4">
           <h1 className="text-[48px] font-bold text-primary">
             Bicor Vie, ma Vie
           </h1>
@@ -20,8 +20,8 @@ export default function Slogan() {
             <img className="-rotate-90 transform" src={ArrowIcon} alt="arrow" />
           </button>
         </div>
-        <div className="h-[413px] w-[623px]">
-          <img src={LifeInsurancePhoto} alt="photo" />
+        <div className="w-[623px] h-[413px] overflow-hidden border">
+          <img src={LifeInsurancePhoto} alt="" />
         </div>
       </div>
     </>
