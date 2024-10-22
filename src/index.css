@@ -10,3 +10,34 @@
 .linkStyle.active {
   @apply text-lg font-semibold text-primary;
 }
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.hero-gradient-bg {
+  background-image: linear-gradient(to bottom, #00170f2f, #00170f41),
+    url(./assets/black-family.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+.font-LibreBaskerville{
+  font-family: "Libre Baskerville", serif;
+}
+.container-bg-patern{
+  background: url("./assets/patern.svg");
+  background-size: cover;
+}
+.bg-service-1{
+  background: url(./assets/assurance-education.jpg);
+  background-size: cover;
+}
+.bg-service-2{
+  background: url(./assets/epargne-retraite26.jpg);
+  background-size: cover;
+}
+.bg-service-3{
+  background: url(./assets/tontine-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
