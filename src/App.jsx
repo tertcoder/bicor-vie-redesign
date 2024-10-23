@@ -1,15 +1,7 @@
 import Accueil from "./pages/Accueil";
-import Services from "./pages/Services";
-import Slogan from "./pages/Slogan";
 
 function App() {
-  return (
-    <>
-      <Accueil />
-      <Services />
-      <Slogan/>
-    </>
-  );
+  return <Accueil />;
 }
 
 export default App;

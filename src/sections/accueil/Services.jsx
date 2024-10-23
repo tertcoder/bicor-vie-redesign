@@ -1,10 +1,10 @@
-import ArrowIcon from "../assets/arrow.svg";
-import Tontine from "../assets/tontine-1.jpg";
+import ArrowIcon from "../../assets/arrow.svg";
+import Tontine from "../../assets/tontine-1.jpg";
 export default function Services() {
   return (
-    <div className="mx-auto mt-[350px] w-full max-w-[1240px] space-y-4">
-      <div className="flex gap-4">
-        <div className="flex-1 border-t-2 border-secondary shadow">
+    <section className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28">
+      <div className="flex gap-4 max-[900px]:flex-col">
+        <div className="flex-1 rounded-b-lg border-t-2 border-secondary shadow">
           <div className="p-6">
             <p className="text-3xl font-semibold text-textGray">
               Enfant assuré = Avenir assuré
@@ -25,7 +25,7 @@ export default function Services() {
             </button>
           </div>
         </div>
-        <div className="flex-1 border-t-2 border-secondary shadow">
+        <div className="flex-1 rounded-b-lg border-t-2 border-secondary shadow">
           <div className="p-6">
             <p className="text-3xl font-semibold text-textGray">
               Épargne Retraite
@@ -48,7 +48,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="w-full border-t-2 border-secondary shadow">
+      <div className="w-full rounded-b-lg border-t-2 border-secondary shadow">
         <div className="max-w-[487px] p-6">
           <p className="text-3xl font-semibold text-textGray">
             Assurance Super Tontine
@@ -60,7 +60,7 @@ export default function Services() {
         </div>
         <div className="bg-service-3 flex h-[375px] flex-col items-end justify-between overflow-hidden rounded-b-lg p-4">
           <div className="w-full px-6 pt-8 text-2xl italic text-white">
-            <p className="text-end font-semibold text-4xl">
+            <p className="text-end text-4xl font-semibold">
               Votre assurance, notre priorité
             </p>
           </div>
@@ -76,6 +76,6 @@ export default function Services() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
