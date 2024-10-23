@@ -10,22 +10,22 @@ function Hero() {
           <div className="flex w-full items-center justify-between max-xl:px-4 max-[900px]:flex-col max-[900px]:text-center min-[900px]:-translate-y-20">
             <div className="space-y-2">
               <div>
-                <p className="text-lg font-semibold text-neutral">
+                <p className="text-lg font-semibold text-neutral max-sm:text-sm">
                   <span className="text-xl">B</span>ICOR{" "}
                   <span className="text-xl">V</span>IE ET{" "}
                   <span className="text-xl">C</span>APITALISATION
                 </p>
               </div>
               <div className="">
-                <h1 className="font-LibreBaskerville text-7xl text-neutral">
+                <h1 className="font-LibreBaskerville text-7xl text-neutral max-sm:text-6xl">
                   <span className="font-bold">Bicor Vie,</span>{" "}
                   <span className="italic">Ma Vie</span>
                 </h1>
-                <h2 className="font-LibreBaskerville text-[54px] text-white/70">
+                <h2 className="font-LibreBaskerville text-[54px] text-white/70 max-sm:text-5xl max-[436px]:text-4xl">
                   <span className="font-bold">Proteger</span>{" "}
                   <span className="italic">Vos Proche</span>
                 </h2>
-                <h3 className="font-LibreBaskerville text-[42px] text-white/70">
+                <h3 className="font-LibreBaskerville text-[42px] text-white/70 max-sm:text-4xl max-[436px]:text-3xl">
                   <span className="font-bold">Protection</span>{" "}
                   <span className="italic">Personelle</span>
                 </h3>
