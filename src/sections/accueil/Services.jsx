@@ -3,6 +3,25 @@ import Tontine from "../../assets/tontine-1.jpg";
 export default function Services() {
   return (
     <section className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28">
+      <div className="flex w-full items-center gap-4 mb-8">
+        <svg
+          width="29"
+          height="30"
+          viewBox="0 0 29 30"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect
+            x="14.3701"
+            y="0.859619"
+            width="20"
+            height="20"
+            transform="rotate(45.9311 14.3701 0.859619)"
+            fill="#014D30"
+          />
+        </svg>
+        <p className="text-[32px] font-semibold text-primary">NOS SERVICES</p>
+      </div>
       <div className="flex gap-4 max-[900px]:flex-col">
         <div className="flex-1 rounded-b-lg border-t-2 border-secondary shadow">
           <div className="p-6">

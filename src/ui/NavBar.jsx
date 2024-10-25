@@ -1,30 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
+import ProgressUi from "./ProgressUi";
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  document.addEventListener("scroll", () => {
+    const scrollPosition = window.scrollY;
+    console.log(scrollPosition)
+    if (scrollPosition > 100) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  });
 
   return (
-    <nav className="relative text-textGray">
+    <nav
+      className={`fixed left-0 top-0 z-50 w-full bg-transparent text-textGray duration-300 ${isScrolled ? "bg-white" : "bg-transparent"}`}
+    >
       <div className="mx-auto mb-2 flex w-full max-w-screen-xl flex-row items-center justify-between py-2 max-xl:px-4">
         <img src={logo} className="h-24" alt="Logo" />
         <div className="space-x-4 max-lg:hidden">
           <a href="#" className="linkStyle active">
             Accueil
           </a>
-          <a href="#" className="linkStyle">
+          <a href="#" className={`linkStyle ${!isScrolled ? "text-white" : "text-textGray"}`}>
             A Propos de Nous
           </a>
-          <a href="#" className="linkStyle">
+          <a href="#" className={`linkStyle ${!isScrolled ? "text-white" : "text-textGray"}`}>
             Nos Produits
           </a>
-          <a href="#" className="linkStyle">
+          <a href="#" className={`linkStyle ${!isScrolled ? "text-white" : "text-textGray"}`}>
             Publications
           </a>
-          <a href="#" className="linkStyle">
+          <a href="#" className={`linkStyle ${!isScrolled ? "text-white" : "text-textGray"}`}>
             Nos Agences
           </a>
-          <a href="#" className="linkStyle">
+          <a href="#" className={`linkStyle ${!isScrolled ? "text-white" : "text-textGray"}`}>
             Contact
           </a>
         </div>
@@ -64,19 +78,19 @@ function NavBar() {
             <a href="#" className="linkStyle active">
               Accueil
             </a>
-            <a href="#" className="linkStyle">
+            <a href="#" className={`linkStyle`}>
               A Propos de Nous
             </a>
-            <a href="#" className="linkStyle">
+            <a href="#" className={`linkStyle`}>
               Nos Produits
             </a>
-            <a href="#" className="linkStyle">
+            <a href="#" className={`linkStyle`}>
               Publications
             </a>
-            <a href="#" className="linkStyle">
+            <a href="#" className={`linkStyle`}>
               Nos Agences
             </a>
-            <a href="#" className="linkStyle">
+            <a href="#" className={`linkStyle`}>
               Contact
             </a>
           </div>
@@ -86,11 +100,7 @@ function NavBar() {
         </div>
       </div>
 
-      <div className="grid w-full grid-cols-3">
-        <div className="h-0.5 bg-secondary"></div>
-        <div className="h-0.5 bg-primary"></div>
-        <div className="h-0.5 bg-accent"></div>
-      </div>
+     {isScrolled &&  <ProgressUi />}
     </nav>
   );
 }
