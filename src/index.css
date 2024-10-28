@@ -42,3 +42,14 @@ body {
   background-position: center;
 }
 
+.bg-insurance{
+  background: url(./assets/0.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-pourquoi{
+  background: url(./assets/1.jpg);
+  background-size: cover;
+  background-position: center;
+}

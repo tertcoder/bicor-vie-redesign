@@ -2,6 +2,7 @@ import ArrowIcon from "../../assets/arrow.svg";
 import umbrellaIcon from "../../assets/umbrella.svg";
 import supportIcon from "../../assets/support.svg";
 import bookIcon from "../../assets/book.svg";
+import { Link } from "react-router-dom";
 function Hero() {
   return (
     <section>
@@ -59,14 +60,16 @@ function Hero() {
             </div>
           </div>
           <div>
-            <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
-              <span>Voir Plus</span>
-              <img
-                className="-rotate-90 transform"
-                src={ArrowIcon}
-                alt="arrow"
-              />
-            </button>
+            <Link to="/insurance-contracts">
+              <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
+                <span>Voir Plus</span>
+                <img
+                  className="-rotate-90 transform"
+                  src={ArrowIcon}
+                  alt="arrow"
+                />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -87,14 +90,16 @@ function Hero() {
             </div>
           </div>
           <div>
-            <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
-              <span>Voir Plus</span>
-              <img
-                className="-rotate-90 transform"
-                src={ArrowIcon}
-                alt="arrow"
-              />
-            </button>
+            <Link to="/pourquoi-sous-crire">
+              <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
+                <span>Voir Plus</span>
+                <img
+                  className="-rotate-90 transform"
+                  src={ArrowIcon}
+                  alt="arrow"
+                />
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -113,6 +118,7 @@ function Hero() {
             </p>
           </div>
           <div>
+            <Link to="/education-Insurance-Advantages">
             <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
               <span>Voir Plus</span>
               <img
@@ -121,6 +127,7 @@ function Hero() {
                 alt="arrow"
               />
             </button>
+            </Link>
           </div>
         </div>
       </div>
