@@ -16,6 +16,14 @@ export default {
         textGray: "#333333",
         textDark: "#010204",
       },
+      screens: {
+        xxs: "250px",
+        xs: "480px",
+        sm: "768px",
+        md: "834px",
+        lg: "1024px",
+        xl: "1440px",
+      }
     },
   },
   plugins: [],

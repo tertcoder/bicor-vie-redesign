@@ -30,6 +30,7 @@ body {
 .bg-service-1{
   background: url(./assets/assurance-education.jpg);
   background-size: cover;
+  color: #eaececef;
 }
 .bg-service-2{
   background: url(./assets/epargne-retraite26.jpg);

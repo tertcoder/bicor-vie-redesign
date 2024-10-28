@@ -4,7 +4,7 @@ import utls from "../../utls";
 export default function Actualite() {
   return (
     <>
-      <div className="xxs:px-4 min-h-screen w-full bg-textGray py-20">
+      <div className="xxs:px-4 lg:px-0 min-h-screen w-full bg-textGray py-20">
         <div className="mx-auto max-w-[1300px] space-y-8">
           <div className="flex w-full items-center gap-4">
             <svg

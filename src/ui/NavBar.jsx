@@ -82,13 +82,13 @@ function NavBar() {
               A Propos de Nous
             </a>
             <a href="#" className={`linkStyle`}>
-              Nos Produits
+              Nos Service
             </a>
             <a href="#" className={`linkStyle`}>
-              Publications
+              Actualite
             </a>
             <a href="#" className={`linkStyle`}>
-              Nos Agences
+              Equipe
             </a>
             <a href="#" className={`linkStyle`}>
               Contact
