@@ -8,14 +8,12 @@ import NavBar from "../ui/NavBar";
 function Accueil() {
   return (
     <>
-      <NavBar />
       <Hero />
       <div className="min-[900px]:-translate-y-24">
         <Services />
         <Slogan />
         <Actualite/>
         <Team/>
-        <Footer/>
       </div>
     </>
   );

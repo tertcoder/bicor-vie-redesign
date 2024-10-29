@@ -195,7 +195,6 @@ export default function PourquoiSouscrire() {
           ))}
         </div>
       </div>
-      <Footer />
     </>
   );
 }

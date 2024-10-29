@@ -5,6 +5,9 @@ import { Link, Outlet } from "react-router-dom";
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false); // New state for mobile dropdown
+
   // const [isScrolled, setIsScrolled] = useState(false);
 
   // document.addEventListener("scroll", () => {
@@ -19,48 +22,73 @@ function NavBar() {
 
   return (
     <>
-      <nav
-        className={`fixed left-0 top-0 z-50 w-full bg-transparent text-textGray duration-300 bg-white`}
-      >
+      <nav className="sticky top-0 z-50 w-full bg-white text-textGray duration-300">
         <div className="mx-auto mb-2 flex w-full max-w-screen-xl flex-row items-center justify-between py-2 max-xl:px-4">
           <img src={logo} className="h-24" alt="Logo" />
-          <div className="space-x-4 max-lg:hidden">
-            <Link to="" className="linkStyle active">
+
+          <div className="relative space-x-4 max-lg:hidden">
+            <Link to="/" className="linkStyle active">
               Accueil
             </Link>
-            <Link
-              to=""
-              className={`linkStyle`}
-            >
+            <Link to="/a-propos" className="linkStyle">
               A Propos de Nous
             </Link>
-            <Link
-              to=""
-              className={`linkStyle`}
+
+            {/* Dropdown Menu for Desktop */}
+            <div
+              className="relative inline-block"
+              onClick={() => setDropdownOpen(!dropdownOpen)}
             >
-              Nos Produits
-            </Link>
-            <Link
-              to=""
-              className={`linkStyle`}
-            >
+              <div className="linkStyle">Nos Produits</div>
+              {dropdownOpen && (
+                <div className="absolute left-0 mt-2 w-48 rounded-lg bg-white shadow-lg">
+                  <Link
+                    to="/protection-credit"
+                    className="block px-4 py-2 text-textGray hover:bg-gray-100"
+                  >
+                    Protection Crédit
+                  </Link>
+                  <Link
+                    to="/pension"
+                    className="block px-4 py-2 text-textGray hover:bg-gray-100"
+                  >
+                    Pension/Retraite
+                  </Link>
+                  <Link
+                    to="/protection-social"
+                    className="block px-4 py-2 text-textGray hover:bg-gray-100"
+                  >
+                    Protection Social
+                  </Link>
+                  <Link
+                    to="/assurance-education"
+                    className="block px-4 py-2 text-textGray hover:bg-gray-100"
+                  >
+                    Assurance Education
+                  </Link>
+                  <Link
+                    to="/tontine"
+                    className="block px-4 py-2 text-textGray hover:bg-gray-100"
+                  >
+                    Tontine
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link to="#" className="linkStyle">
               Publications
             </Link>
-            <Link
-              to=""
-              className={`linkStyle`}
-            >
+            <Link to="#" className="linkStyle">
               Nos Agences
             </Link>
-            <Link
-              to=""
-              className={`linkStyle`}
-            >
+            <Link to="#" className="linkStyle">
               Contact
             </Link>
           </div>
+
           <div className="flex items-center space-x-4">
-            {/* Button to open the mobile nav */}
+            {/* Mobile menu toggle button */}
             <button
               className="hidden rounded-md bg-secondary p-2 max-lg:block"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -84,7 +112,6 @@ function NavBar() {
           }`}
         >
           <div className="h-full w-80 bg-neutral p-4">
-            {/* Button to close the nav */}
             <button
               className="rounded-md bg-primary px-2 py-0.5 text-neutral"
               onClick={() => setMobileMenuOpen(false)}
@@ -92,22 +119,62 @@ function NavBar() {
               <span>Fermer</span>
             </button>
             <div className="mt-4 flex flex-col space-y-4">
-              <Link to="to/" className="linkStyle active">
+              <Link to="/" className="linkStyle active">
                 Accueil
               </Link>
-              <Link to="" className={`linkStyle`}>
+              <Link to="/a-propos" className="linkStyle">
                 A Propos de Nous
               </Link>
-              <Link to="" className={`linkStyle`}>
-                Nos Service
+
+              {/* Dropdown Menu for Mobile */}
+              <div className="relative">
+                <button
+                  className="linkStyle flex w-full items-center justify-between"
+                  onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
+                >
+                  Nos Produits
+                  <span>{mobileDropdownOpen ? "-" : "+"}</span>
+                </button>
+                {mobileDropdownOpen && (
+                  <div className="ml-4 mt-2 space-y-2">
+                    <Link
+                      to="/protection-credit"
+                      className="block text-textGray"
+                    >
+                      Protection Crédit
+                    </Link>
+                    <Link
+                      to="/pension"
+                      className="block text-textGray"
+                    >
+                      Pension/Retraite
+                    </Link>
+                    <Link
+                      to="/protection-social"
+                      className="block text-textGray"
+                    >
+                      Protection Social
+                    </Link>
+                    <Link
+                      to="/assurance-education"
+                      className="block text-textGray"
+                    >
+                      Assurance Education
+                    </Link>
+                    <Link to="/tontine" className="block text-textGray">
+                      Tontine
+                    </Link>
+                  </div>
+                )}
+              </div>
+
+              <Link to="#" className="linkStyle">
+                Publications
               </Link>
-              <Link to="" className={`linkStyle`}>
-                Actualite
+              <Link to="#" className="linkStyle">
+                Nos Agences
               </Link>
-              <Link to="" className={`linkStyle`}>
-                Equipe
-              </Link>
-              <Link to="" className={`linkStyle`}>
+              <Link to="#" className="linkStyle">
                 Contact
               </Link>
             </div>

@@ -128,7 +128,6 @@ const InsuranceContracts = () => {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
