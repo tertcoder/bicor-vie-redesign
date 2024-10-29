@@ -2,6 +2,7 @@ import React from "react";
 import heartSVG from "../assets/heart.svg";
 import Team from "../sections/accueil/Team";
 import Photo from "../assets/img-20241011-wa0017.jpg"
+import Actualite from "../sections/accueil/Actualite";
 const AboutUs = () => {
   return (
     <div>
@@ -798,13 +799,13 @@ const AboutUs = () => {
                 dans toutes les étapes de leur vie avec des solutions adaptées à
                 leurs besoins.
               </p>
-              <button className="rounded-full bg-primary px-8 py-3 font-bold text-white transition-all hover:bg-opacity-90">
-                Découvrir notre histoire
-              </button>
+             
             </div>
           </div>
         </div>
       </div>
+      <Actualite/>
+
       {/* Call to Action Section */}
       <section className="bg-primary py-20 text-neutral">
         <div className="container mx-auto px-4 text-center">

@@ -9,6 +9,8 @@ import Footer from "./sections/accueil/Footer";
 import CreditProtectionPage from "./pages/CreditProtectionPage";
 import PensionSection from "./pages/PensionSection";
 import InsurancePage from "./pages/InsurancePage";
+import SocialProtectionSection from "./pages/SocialProtectionSection";
+import EducationInsurancePage from "./pages/EducationInsurancePage";
 
 function App() {
   return (
@@ -35,7 +37,14 @@ function App() {
               element={<CreditProtectionPage />}
             />
             <Route path="/pension" element={<PensionSection />} />
-            <Route path="/protection-social" element={<InsurancePage />} />
+            <Route
+              path="/protection-social"
+              element={<SocialProtectionSection />}
+            />
+            <Route
+              path="/assurance-education"
+              element={<EducationInsurancePage/>}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
