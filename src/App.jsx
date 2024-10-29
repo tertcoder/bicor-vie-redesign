@@ -45,6 +45,10 @@ function App() {
               path="/assurance-education"
               element={<EducationInsurancePage/>}
             />
+            <Route
+              path="/tontine"
+              element={<EducationInsurancePage/>}
+            />
           </Route>
         </Routes>
       </BrowserRouter>
