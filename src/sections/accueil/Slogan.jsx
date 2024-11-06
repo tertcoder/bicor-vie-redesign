@@ -3,7 +3,7 @@ import ArrowIcon from "../../assets/arrow.svg";
 
 export default function Slogan() {
   return (
-    <div className="mx-auto my-16 flex w-full max-w-[1240px] items-center justify-between gap-12 max-xl:px-4 max-[900px]:flex-col">
+    <div className="mx-auto my-32 flex w-full max-w-[1240px] items-center justify-between gap-12 max-xl:px-4 max-[900px]:flex-col">
       <div className="w-full max-w-[572px] space-y-4">
         <h1 className="text-[48px] font-bold text-primary">
           Bicor Vie, ma Vie

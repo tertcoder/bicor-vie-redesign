@@ -1,82 +1,106 @@
-import React from "react";
-import Photo from "../assets/7.jpg";
+import React from 'react';
+import { Info, Users, DollarSign, Award } from 'lucide-react';
+import Photo from "../assets/7.jpg"
 
-function TontinePage() {
+const TontinePage = () => {
   return (
-    <div className="bg-neutral p-6 font-notoFont text-textDark sm:p-10 lg:p-20">
-      {/* Title */}
-      <h1 className="mb-6 text-3xl font-bold text-primary sm:text-4xl">
-        Tontine
-      </h1>
-
-      {/* Main Content Section */}
-      <div className="flex flex-col items-center gap-6 lg:flex-row lg:gap-10">
-        {/* Image Placeholder */}
-        <div className="w-full lg:w-1/2">
-          <img
-            src={Photo}
-            alt="Tontine visual"
-            className="h-auto w-full rounded-lg object-cover shadow-md"
-          />
-        </div>
-
-        {/* Description */}
-        <div className="w-full space-y-4 text-textGray lg:w-1/2">
-          <p>
-            La tontine consiste en un groupe de personnes qui cotisent
-            régulièrement dans un fonds commun. À la fin d'une période
-            déterminée, les fonds sont redistribués aux participants restants,
-            souvent avec un bonus.
-          </p>
-
-          {/* Functionality Explanation */}
-          <h2 className="text-2xl font-bold text-primary">Fonctionnement</h2>
-          <ul className="list-disc space-y-2 pl-6">
-            <li>
-              <span className="font-bold">Cotisations:</span> Chaque participant
-              verse une somme d'argent à intervalles réguliers.
-            </li>
-            <li>
-              <span className="font-bold">Redistribution:</span> À la fin du
-              terme de la tontine, les fonds accumulés sont répartis entre les
-              participants encore en vie, sous forme de capital ou de rente.
-            </li>
-            <li>
-              <span className="font-bold">Bonus:</span> Il peut y avoir des
-              gains supplémentaires basés sur la performance du fonds.
-            </li>
-          </ul>
+    <div className="min-h-screen bg-neutral font-notoFont">
+      {/* Hero Section */}
+      <div className="relative bg-primary text-neutral py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            <div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-6">
+                Tontine Insurance
+              </h1>
+              <p className="text-lg mb-8">
+                Participez à une approche collective de l'épargne avec notre système de tontine moderne et sécurisé.
+              </p>
+              <button className="bg-secondary text-primary px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all">
+                En savoir plus
+              </button>
+            </div>
+            <div className="relative">
+              <img
+                src={Photo}
+                alt="Tontine concept illustration"
+                className="rounded-lg shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Additional Features Section */}
-      <div className="mt-10">
-        <h3 className="mb-4 text-2xl font-bold text-primary">
-          Why Choose Our Tontine?
-        </h3>
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="rounded-lg bg-secondary p-4 text-center shadow-lg">
-            <h4 className="text-xl font-bold">Secure Investment</h4>
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-16">
+        {/* Definition Section */}
+        <div className="max-w-3xl mx-auto mb-16">
+          <h2 className="text-3xl font-bold text-primary mb-6">
+            Qu'est-ce qu'une Tontine?
+          </h2>
+          <p className="text-textGray text-lg">
+            La tontine consiste en un groupe de personnes qui cotisent régulièrement dans un fonds commun. À la fin d'une période déterminée, les fonds sont redistribués aux participants restants, souvent avec un bonus.
+          </p>
+        </div>
+
+        {/* Features Grid */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {/* Cotisations */}
+          <div className="bg-neutral p-6 rounded-lg shadow-lg border border-gray-100">
+            <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <DollarSign className="text-neutral" size={24} />
+            </div>
+            <h3 className="text-xl font-semibold text-primary mb-3">Cotisations</h3>
             <p className="text-textGray">
-              Guaranteed safety of funds and professional management.
+              Chaque participant verse une somme d'argent à intervalles réguliers.
             </p>
           </div>
-          <div className="rounded-lg bg-secondary p-4 text-center shadow-lg">
-            <h4 className="text-xl font-bold">Flexible Plans</h4>
+
+          {/* Redistribution */}
+          <div className="bg-neutral p-6 rounded-lg shadow-lg border border-gray-100">
+            <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <Users className="text-neutral" size={24} />
+            </div>
+            <h3 className="text-xl font-semibold text-primary mb-3">Redistribution</h3>
             <p className="text-textGray">
-              Options for different levels of contributions and durations.
+              À la fin du terme de la tontine, le fonds accumulés sont répartis entre les participants qui sont encore en vie, généralement sous forme de capital ou de rente.
             </p>
           </div>
-          <div className="rounded-lg bg-secondary p-4 text-center shadow-lg">
-            <h4 className="text-xl font-bold">Bonus Opportunities</h4>
+
+          {/* Bonus */}
+          <div className="bg-neutral p-6 rounded-lg shadow-lg border border-gray-100">
+            <div className="bg-primary w-12 h-12 rounded-full flex items-center justify-center mb-4">
+              <Award className="text-neutral" size={24} />
+            </div>
+            <h3 className="text-xl font-semibold text-primary mb-3">Bonus</h3>
             <p className="text-textGray">
-              Earn extra based on fund performance.
+              Il peut y avoir des gains supplémentaires basés sur la performance du fonds.
             </p>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-primary text-neutral rounded-xl p-8 md:p-12">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-6">
+              Prêt à Commencer?
+            </h2>
+            <p className="text-lg mb-8">
+              Rejoignez notre communauté de tontine et commencez à construire votre avenir financier dès aujourd'hui.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="bg-secondary text-primary px-8 py-3 rounded-md font-semibold hover:bg-opacity-90 transition-all">
+                S'inscrire
+              </button>
+              <button className="border-2 border-neutral text-neutral px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-primary transition-all">
+                Nous Contacter
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default TontinePage;

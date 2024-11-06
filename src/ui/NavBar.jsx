@@ -1,36 +1,49 @@
 import { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import ProgressUi from "./ProgressUi";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 function NavBar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false); // New state for mobile dropdown
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState(false);
+  const [crtPage, setCrtPage] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const currentRouteName = location.pathname;
 
-  // const [isScrolled, setIsScrolled] = useState(false);
+  
 
-  // document.addEventListener("scroll", () => {
-  //   const scrollPosition = window.scrollY;
-  //   console.log(scrollPosition);
-  //   if (scrollPosition > 100) {
-  //     setIsScrolled(true);
-  //   } else {
-  //     setIsScrolled(false);
-  //   }
-  // });
+  const handlerScroll = () => {
+    const scrollPosition = window.scrollY;
+    if (currentRouteName === "/") {
+      if (scrollPosition > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    }
+  };
+
+  useEffect(() => {
+    const currentPage = document.URL.split("/");
+    console.log(currentPage)
+    document.addEventListener("scroll", handlerScroll);
+  }, [currentRouteName]);
 
   return (
     <>
-      <nav className="sticky top-0 z-50 w-full bg-white text-textGray duration-300">
+      <nav
+        className={`fixed left-0 top-0 z-50 w-full duration-300 ${isScrolled ? "bg-white text-textGray" : "bg-transparent text-white"}`}
+      >
         <div className="mx-auto mb-2 flex w-full max-w-screen-xl flex-row items-center justify-between py-2 max-xl:px-4">
           <img src={logo} className="h-24" alt="Logo" />
 
           <div className="relative space-x-4 max-lg:hidden">
-            <Link to="/" className="linkStyle active">
+            <Link to="/" className={`linkStyle active`}>
               Accueil
             </Link>
-            <Link to="/a-propos" className="linkStyle">
+            <Link to="/a-propos" className={`linkStyle`}>
               A Propos de Nous
             </Link>
 
@@ -57,13 +70,13 @@ function NavBar() {
                     {" "}
                     <path
                       d="M5.70711 9.71069C5.31658 10.1012 5.31658 10.7344 5.70711 11.1249L10.5993 16.0123C11.3805 16.7927 12.6463 16.7924 13.4271 16.0117L18.3174 11.1213C18.708 10.7308 18.708 10.0976 18.3174 9.70708C17.9269 9.31655 17.2937 9.31655 16.9032 9.70708L12.7176 13.8927C12.3271 14.2833 11.6939 14.2832 11.3034 13.8927L7.12132 9.71069C6.7308 9.32016 6.09763 9.32016 5.70711 9.71069Z"
-                      fill="#014D30"
+                      fill={isScrolled ? "#333333" : "white"}
                     ></path>{" "}
                   </g>
                 </svg>
               </div>
               {dropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 rounded-lg bg-white shadow-lg">
+                <div className="absolute left-0 mt-2 w-48 overflow-hidden rounded-lg bg-white shadow-lg">
                   <Link
                     to="/protection-credit"
                     className="block px-4 py-2 text-textGray hover:bg-gray-100"
@@ -98,13 +111,13 @@ function NavBar() {
               )}
             </div>
 
-            <Link to="#" className="linkStyle">
+            <Link to="#" className={`linkStyle`}>
               Publications
             </Link>
-            <Link to="#" className="linkStyle">
+            <Link to="#" className={`linkStyle`}>
               Nos Agences
             </Link>
-            <Link to="#" className="linkStyle">
+            <Link to="#" className={`linkStyle`}>
               Contact
             </Link>
           </div>
@@ -144,7 +157,7 @@ function NavBar() {
               <Link to="/" className="linkStyle active">
                 Accueil
               </Link>
-              <Link to="/a-propos" className="linkStyle">
+              <Link to="/a-propos" className={`linkStyle`}>
                 A Propos de Nous
               </Link>
 
@@ -187,13 +200,13 @@ function NavBar() {
                 )}
               </div>
 
-              <Link to="#" className="linkStyle">
+              <Link to="#" className={`linkStyle`}>
                 Publications
               </Link>
-              <Link to="#" className="linkStyle">
+              <Link to="#" className={`linkStyle`}>
                 Nos Agences
               </Link>
-              <Link to="#" className="linkStyle">
+              <Link to="#" className={`linkStyle`}>
                 Contact
               </Link>
             </div>
@@ -203,7 +216,7 @@ function NavBar() {
           </div>
         </div>
 
-        <ProgressUi />
+        {isScrolled && <ProgressUi />}
       </nav>
       <Outlet />
     </>

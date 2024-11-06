@@ -1,9 +1,46 @@
 import ArrowIcon from "../../assets/arrow.svg";
-import Tontine from "../../assets/tontine-1.jpg";
+import CreditPhoto from "../../assets/credit.jpg";
+import PensionPhoto from "../../assets/retraite.png";
+import TontinePhoto from "../../assets/tontine-1.jpg";
+import SocialProtectionPhoto from "../../assets/social-protection.png";
+import EducationPhoto from "../../assets/education.jpg";
 export default function Services() {
+  const servicesData = [
+    {
+      img: CreditPhoto,
+      name: "Assurance Crédit",
+      description:
+        "Protégez vos crédits et emprunts avec une couverture adaptée en cas de difficulté de remboursement.",
+    },
+    {
+      img: PensionPhoto,
+      name: "Assurance Pension",
+      description:
+        "Quittez votre activité en toute sérénité avec un revenu régulier après la retraite.",
+    },
+    {
+      img: EducationPhoto,
+      name: "Assurance Éducation",
+      description:
+        "Offrez à vos enfants une éducation de qualité en planifiant dès aujourd'hui les dépenses futures.",
+    },
+    {
+      img: SocialProtectionPhoto,
+      name: "Protection Sociale",
+      description:
+        "Bénéficiez d'une couverture pour vous et votre famille face aux imprévus et aux risques de la vie.",
+    },
+    {
+      img: TontinePhoto,
+      name: "Assurance Super Tontine",
+      description:
+        "Une assurance vie qui valorise vos cotisations régulières pour plus de sécurité et d'épargne.",
+    },
+  ];
+
   return (
     <section className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28">
-      <div className="flex w-full items-center gap-4 mb-8">
+      <div className="mb-8 flex w-full items-center gap-4">
         <svg
           width="29"
           height="30"
@@ -22,78 +59,39 @@ export default function Services() {
         </svg>
         <p className="text-[32px] font-semibold text-primary">NOS SERVICES</p>
       </div>
-      <div className="flex gap-4 max-[900px]:flex-col">
-        <div className="flex-1 rounded-b-lg border-t-2 border-secondary shadow">
-          <div className="p-6">
-            <p className="text-3xl font-semibold text-textGray">
-              Enfant assuré = Avenir assuré
-            </p>
-            <p className="mt-3 text-xl font-light text-textGray">
-              Offrez à vos enfants une éducation de qualité et planifiez dès
-              maintenant leurs dépenses futures.
-            </p>
-          </div>
-          <div className="bg-service-1 flex h-[375px] items-end justify-end rounded-b-lg p-4">
-            <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
-              <span>Préparer l'Avenir</span>
+      <div className="grid grid-cols-2 flex-col gap-8 max-[900px]:flex-col">
+        {servicesData.map((service, id) => (
+          <div
+            className={`flex-1 rounded-b-lg border-t-2 border-secondary shadow ${id === 0 ? "col-span-2" : "col-span-1"}`}
+            key={id}
+          >
+            <div className="p-6">
+              <p className="text-3xl font-semibold text-textGray">
+                {service.name}
+              </p>
+              <p className="mt-3 text-xl font-light text-textGray">
+                {service.description}
+              </p>
+            </div>
+            <div className="relative flex h-[375px] items-end justify-end overflow-hidden rounded-b-lg">
               <img
-                className="-rotate-90 transform"
-                src={ArrowIcon}
-                alt="arrow"
+                src={service.img}
+                alt={service.name}
+                className="absolute bottom-0 w-full transform"
               />
-            </button>
+              <div className="p-4">
+                <button className="relative z-50 flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
+                  <span>Préparer l'Avenir</span>
+                  <img
+                    className="-rotate-90 transform"
+                    src={ArrowIcon}
+                    alt="arrow"
+                  />
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="flex-1 rounded-b-lg border-t-2 border-secondary shadow">
-          <div className="p-6">
-            <p className="text-3xl font-semibold text-textGray">
-              Épargne Retraite
-            </p>
-            <p className="mt-3 text-xl font-light text-textGray">
-              Quittez votre activité en toute sérénité avec un revenu régulier
-              après la retraite
-            </p>
-          </div>
-          <div className="bg-service-2 flex h-[375px] items-end justify-end overflow-hidden rounded-b-lg p-4">
-            <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
-              <span>Voir les Avantages</span>
-              <img
-                className="-rotate-90 transform"
-                src={ArrowIcon}
-                alt="arrow"
-              />
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div className="w-full rounded-b-lg border-t-2 border-secondary shadow">
-        <div className="max-w-[487px] p-6">
-          <p className="text-3xl font-semibold text-textGray">
-            Assurance Super Tontine
-          </p>
-          <p className="mt-3 text-xl font-light text-textGray">
-            Une assurance vie qui valorise vos cotisations régulières pour plus
-            de sécurité.
-          </p>
-        </div>
-        <div className="bg-service-3 flex h-[375px] flex-col items-end justify-between overflow-hidden rounded-b-lg p-4">
-          <div className="w-full px-6 pt-8 text-2xl italic text-white">
-            <p className="text-end text-4xl font-semibold">
-              Votre assurance, notre priorité
-            </p>
-          </div>
-          <div>
-            <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
-              <span>Voir les Avantages</span>
-              <img
-                className="-rotate-90 transform"
-                src={ArrowIcon}
-                alt="arrow"
-              />
-            </button>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

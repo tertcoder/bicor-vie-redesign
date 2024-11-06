@@ -11,6 +11,7 @@ import PensionSection from "./pages/PensionSection";
 import InsurancePage from "./pages/InsurancePage";
 import SocialProtectionSection from "./pages/SocialProtectionSection";
 import EducationInsurancePage from "./pages/EducationInsurancePage";
+import TontinePage from "./pages/Tontine";
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
             />
             <Route
               path="/tontine"
-              element={<EducationInsurancePage/>}
+              element={<TontinePage/>}
             />
           </Route>
         </Routes>
