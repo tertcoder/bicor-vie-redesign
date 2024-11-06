@@ -110,7 +110,7 @@ export default function Actualite() {
               </div>
             </div>
           </div>
-          <div className="overflow-hidden" ref={containerRef}>
+          <div className="overflow-auto" ref={containerRef}>
             <motion.div
               className="flex items-baseline gap-8 py-4"
               animate={controls}
