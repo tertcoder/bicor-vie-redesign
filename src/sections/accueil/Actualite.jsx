@@ -36,15 +36,15 @@ export default function Actualite() {
       while (isAnimating) {
         // Start position
         await controls.start({ x: 0 }, { duration: 1.5, ease: "easeInOut" });
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise((resolve) => setTimeout(resolve, 3000));
 
         // Move through each step
         for (let i = 1; i <= totalSteps && isAnimating; i++) {
           await controls.start(
-            { x: stepSize * i }, 
-            { duration: 1.5, ease: "easeInOut" }
+            { x: stepSize * i },
+            { duration: 1.5, ease: "easeInOut" },
           );
-          await new Promise(resolve => setTimeout(resolve, 3000));
+          await new Promise((resolve) => setTimeout(resolve, 3000));
         }
       }
     };
@@ -81,36 +81,38 @@ export default function Actualite() {
             </svg>
             <p className="text-[32px] font-bold text-neutral">Actualité</p>
           </div>
-          <div className="w-full overflow-hidden rounded-b-3xl rounded-t-lg">
-            <div className="max-h-[536px] w-full overflow-hidden">
-              <img src={Img} alt="photo" />
+          <div className="flex w-full overflow-hidden rounded-b-3xl rounded-t-lg">
+            <div className="w-full max-w-xl overflow-hidden bg-white">
+              <img src={Img} alt="photo" className="h-full w-full" />
             </div>
-            <ProgressUi />
-            <div className="w-full space-y-4 bg-white p-7">
-              <div className="flex w-full items-start justify-between">
-                <div className="max-w-[709px]">
-                  <p className="text-3xl font-bold text-textGray">
-                    Passation de Pouvoir à la Direction Générale de BICOR Vie &
-                    Capitalisation
-                  </p>
+
+            <div className="w-full flex-1 space-y-4 bg-white p-8 flex items-center justify-center">
+              <div className="space-y-6">
+                <div className="flex w-full items-start justify-between">
+                  <div className="w-full">
+                    <p className="text-3xl font-bold text-textGray">
+                      Passation de Pouvoir à la Direction Générale de BICOR Vie
+                      & Capitalisation
+                    </p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-textGray/70">
+                      13 Octobre 2024
+                    </p>
+                  </div>
                 </div>
                 <div>
-                  <p className="font-semibold text-textGray/70">
-                    13 Octobre 2024
+                  <p className="text-xl text-textGray">
+                    Bujumbura, le 10 octobre 2024 – BICOR Vie & Capitalisation,
+                    l'une des principales compagnies d'assurance du Burundi,
+                    entre dans une nouvelle ère avec la passation de pouvoir
+                    entre Monsieur Willy F.
                   </p>
                 </div>
-              </div>
-              <div>
-                <p className="text-xl text-textGray">
-                  Bujumbura, le 10 octobre 2024 – BICOR Vie & Capitalisation,
-                  l'une des principales compagnies d'assurance du Burundi, entre
-                  dans une nouvelle ère avec la passation de pouvoir entre
-                  Monsieur Willy F.
-                </p>
               </div>
             </div>
           </div>
-          <div className="overflow-auto" ref={containerRef}>
+          <div className="overflow-hidden" ref={containerRef}>
             <motion.div
               className="flex items-baseline gap-8 py-4"
               animate={controls}

@@ -49,7 +49,7 @@ function NavBar() {
   return (
     <>
       <nav
-        className={`left-0 top-0 z-50 w-full duration-300 ${navStyle.position}`}
+        className={`left-0 top-0 z-50 w-full duration-100 ${navStyle.position}`}
         style={{ backgroundColor: navStyle.backgroundColor }}
       >
         <div className="mx-auto mb-2 flex w-full max-w-screen-xl flex-row items-center justify-between py-2 max-xl:px-4">
