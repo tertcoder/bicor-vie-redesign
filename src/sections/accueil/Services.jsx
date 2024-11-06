@@ -26,7 +26,7 @@ export default function Services() {
     },
     {
       img: SocialProtectionPhoto,
-      name: "Protection Sociale",
+      name: "Assurance Protection Sociale",
       description:
         "Bénéficiez d'une couverture pour vous et votre famille face aux imprévus et aux risques de la vie.",
     },
@@ -39,7 +39,7 @@ export default function Services() {
   ];
 
   return (
-    <section className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28">
+    <section className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28" id="services">
       <div className="mb-8 flex w-full items-center gap-4">
         <svg
           width="29"

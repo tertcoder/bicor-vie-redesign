@@ -12,7 +12,7 @@ const CreditProtectionPage = () => {
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="lg:w-1/2">
-                <h1 className="text-4xl sm:text-5xl font-libreFont font-bold mb-6 text-primary">
+                <h1 className="text-4xl sm:text-5xl  font-bold mb-6 text-primary">
                   Protection Crédit
                 </h1>
                 <p className="text-lg text-textGray mb-8">
@@ -40,7 +40,7 @@ const CreditProtectionPage = () => {
         {/* Features Grid with SVG Icons */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-libreFont font-bold text-primary mb-12 text-center">
+            <h2 className="text-3xl  font-bold text-primary mb-12 text-center">
               Principaux aspects de la Protection Crédit
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -131,7 +131,7 @@ const CreditProtectionPage = () => {
         {/* Call to Action section remains the same */}
         <section className="bg-primary text-neutral py-16">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-libreFont font-bold mb-6">
+            <h2 className="text-3xl  font-bold mb-6">
               Protégez votre avenir financier
             </h2>
             <p className="text-lg mb-8 max-w-2xl mx-auto">

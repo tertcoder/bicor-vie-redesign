@@ -33,10 +33,12 @@ function Hero() {
               </div>
             </div>
             <div>
-              <button className="flex items-center gap-3 rounded-xl bg-black px-3 py-3 text-lg text-neutral">
-                <span>Voir Nos Services</span>
-                <img src={ArrowIcon} alt="arrow" />
-              </button>
+              <a href="#services">
+                <button className="flex items-center gap-3 rounded-xl bg-black px-3 py-3 text-lg text-neutral">
+                  <span>Voir Nos Services</span>
+                  <img src={ArrowIcon} alt="arrow" />
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -119,14 +121,14 @@ function Hero() {
           </div>
           <div>
             <Link to="/education-Insurance-Advantages">
-            <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
-              <span>Voir Plus</span>
-              <img
-                className="-rotate-90 transform"
-                src={ArrowIcon}
-                alt="arrow"
-              />
-            </button>
+              <button className="flex items-center gap-3 rounded-xl bg-secondary px-12 py-3 text-lg text-neutral">
+                <span>Voir Plus</span>
+                <img
+                  className="-rotate-90 transform"
+                  src={ArrowIcon}
+                  alt="arrow"
+                />
+              </button>
             </Link>
           </div>
         </div>

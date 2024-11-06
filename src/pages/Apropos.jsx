@@ -1,7 +1,9 @@
 import React from "react";
 import heartSVG from "../assets/heart.svg";
 import Team from "../sections/accueil/Team";
-import Photo from "../assets/img-20241011-wa0017.jpg"
+import Photo from "../assets/about.jpg";
+import Photo1 from "../assets/about.jpeg";
+
 import Actualite from "../sections/accueil/Actualite";
 const AboutUs = () => {
   return (
@@ -24,7 +26,7 @@ const AboutUs = () => {
           <div className="lg:w-1/2">
             <div className="h-80 rounded-lg bg-neutral/10 p-4">
               <img
-                src="https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src={Photo1}
                 alt="Professional insurance services"
                 className="h-full w-full rounded-lg object-cover"
               />
@@ -781,30 +783,34 @@ const AboutUs = () => {
 
       <div id="about" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
-          <div className="grid items-center gap-12 md:grid-cols-2">
+          <div className="flex items-center gap-12 md:grid-cols-2">
             <div>
               <img
                 src={Photo}
                 alt="À propos de nous"
-                className="rounded-lg shadow-lg"
+                className="max-w-xl rounded-lg shadow-lg"
               />
             </div>
             <div>
               <h2 className="mb-6 text-3xl font-bold text-primary">
                 À propos de nous
               </h2>
-              <p className="mb-6 text-textGray">
-                Notre mission est de fournir une protection sociale complète et
-                accessible à tous. Nous nous engageons à accompagner nos assurés
-                dans toutes les étapes de leur vie avec des solutions adaptées à
-                leurs besoins.
+              <p className="mb-6 text-lg text-textGray">
+                Chez BICOR Vie, notre mission est de garantir à chaque individu
+                une protection sociale accessible et complète. Grâce à notre
+                expertise, nous nous engageons à accompagner nos assurés à
+                travers toutes les étapes de la vie, en leur offrant des
+                solutions personnalisées en matière de sécurité financière,
+                d’épargne et de prévoyance. Nous privilégions un soutien
+                constant et des services de qualité, adaptés à la fois aux
+                particuliers et aux entreprises, pour répondre aux besoins
+                spécifiques de chacun.
               </p>
-             
             </div>
           </div>
         </div>
       </div>
-      <Actualite/>
+      <Actualite />
 
       {/* Call to Action Section */}
       <section className="bg-primary py-20 text-neutral">
