@@ -7,7 +7,8 @@ import {
   Users,
   Trophy,
 } from "lucide-react";
-import Photo from "../assets/2.jpg";
+import Photo from "../assets/education.jpg";
+import FinanceVector from "../assets/undraw_finance_re_gnv2.svg";
 
 const EducationInsurancePage = () => {
   const benefits = [
@@ -59,9 +60,7 @@ const EducationInsurancePage = () => {
         <div className="container mx-auto px-4">
           <div className="grid items-center gap-12 md:grid-cols-2">
             <div>
-              <h1 className="mb-6 font-libreFont text-4xl font-bold">
-                Assurance Education
-              </h1>
+              <h1 className="mb-6 text-4xl font-bold">Assurance Education</h1>
               <p className="mb-8 text-lg">
                 L'assurance éducation permet aux parents d'épargner de manière
                 régulière pour les frais d'éducation futurs de leurs enfants,
@@ -84,9 +83,9 @@ const EducationInsurancePage = () => {
       </div>
 
       {/* How it Works Section */}
-      <div className="bg-gray-50 py-20">
+      <div className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center font-libreFont text-3xl font-bold text-primary">
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Fonctionnement
           </h2>
           <div className="grid items-center gap-8 md:grid-cols-2">
@@ -118,45 +117,17 @@ const EducationInsurancePage = () => {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg bg-white p-6 shadow-lg">
-              <div className="space-y-4">
-                <h3 className="mb-4 text-xl font-bold">
-                  Simulateur de cotisation
-                </h3>
-                <div className="space-y-4">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium">
-                      Âge de l'enfant
-                    </label>
-                    <input
-                      type="number"
-                      className="w-full rounded-lg border px-4 py-2 focus:border-primary focus:outline-none"
-                    />
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium">
-                      Durée d'épargne souhaitée
-                    </label>
-                    <select className="w-full rounded-lg border px-4 py-2 focus:border-primary focus:outline-none">
-                      <option>5 ans</option>
-                      <option>10 ans</option>
-                      <option>15 ans</option>
-                    </select>
-                  </div>
-                  <button className="w-full rounded-lg bg-primary px-6 py-3 text-white transition-all hover:bg-opacity-90">
-                    Calculer ma cotisation
-                  </button>
-                </div>
-              </div>
+            <div className="rounded-lg p-6">
+              <img src={FinanceVector} alt="vector" />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Coverage Levels */}
+      {/* Coverage Levels
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center font-libreFont text-3xl font-bold text-primary">
+          <h2 className="mb-12 text-center  text-3xl font-bold text-primary">
             Niveaux de Couverture
           </h2>
           <div className="grid gap-8 md:grid-cols-3">
@@ -190,12 +161,12 @@ const EducationInsurancePage = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Benefits Section */}
       <div className="bg-gray-50 py-20">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center font-libreFont text-3xl font-bold text-primary">
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Avantages
           </h2>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -218,17 +189,23 @@ const EducationInsurancePage = () => {
       {/* Testimonials */}
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <h2 className="mb-12 text-center font-libreFont text-3xl font-bold text-primary">
+          <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Témoignages
           </h2>
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-lg bg-white p-6 shadow-lg">
               <div className="flex items-start space-x-4">
-                <Users className="h-12 w-12 text-primary" />
                 <div>
                   <p className="mb-4 italic">
-                    "Grâce à l'assurance éducation, nous avons pu planifier
-                    sereinement les études supérieures de nos trois enfants."
+                    "Je suis éternellement reconnaissant à l'assurance éducation
+                    pour m'avoir soutenu pendant les moments les plus difficiles
+                    de la vie de mon enfant. Lorsque j'ai perdu mon emploi, je
+                    craignais de ne pas pouvoir lui offrir l'éducation qu'il
+                    méritait, mais grâce à cette assurance, j'ai pu continuer à
+                    lui donner les meilleures chances de réussite. Je ne sais
+                    pas ce que j'aurais fait sans eux, mais je sais que mon
+                    enfant a pu poursuivre ses études avec confiance et espoir,
+                    et pour cela, je suis infiniment reconnaissant."
                   </p>
                   <p className="font-bold">Marie et Pierre D.</p>
                   <p className="text-sm text-textGray">Parents de 3 enfants</p>
@@ -237,11 +214,18 @@ const EducationInsurancePage = () => {
             </div>
             <div className="rounded-lg bg-white p-6 shadow-lg">
               <div className="flex items-start space-x-4">
-                <Trophy className="h-12 w-12 text-primary" />
                 <div>
                   <p className="mb-4 italic">
-                    "Un excellent moyen de préparer l'avenir tout en bénéficiant
-                    d'avantages fiscaux intéressants."
+                    "L'assurance éducation a été un véritable coup de pouce pour
+                    moi et ma famille. Lorsque mon mari a été victime d'un
+                    accident du travail, nous avons dû faire face à des dépenses
+                    médicales énormes et nous craignions de ne plus pouvoir
+                    offrir à nos enfants l'éducation qu'ils méritaient. Mais
+                    grâce à cette assurance, nous avons pu continuer à leur
+                    donner les meilleures chances de réussite. Je suis
+                    infiniment reconnaissante à cette assurance pour nous avoir
+                    soutenus pendant les moments les plus difficiles de notre
+                    vie."
                   </p>
                   <p className="font-bold">Sophie M.</p>
                   <p className="text-sm text-textGray">Mère de 2 enfants</p>
@@ -255,7 +239,7 @@ const EducationInsurancePage = () => {
       {/* CTA Section */}
       <div className="bg-primary py-16 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="mb-6 font-libreFont text-3xl font-bold">
+          <h2 className="mb-6 text-3xl font-bold">
             Préparez l'avenir de vos enfants
           </h2>
           <p className="mx-auto mb-8 max-w-2xl">

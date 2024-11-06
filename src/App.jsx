@@ -9,7 +9,7 @@ import Footer from "./sections/accueil/Footer";
 import CreditProtectionPage from "./pages/CreditProtectionPage";
 import PensionSection from "./pages/PensionSection";
 import InsurancePage from "./pages/InsurancePage";
-import SocialProtectionSection from "./pages/SocialProtectionSection";
+import SocialProtectionSection from "./pages/SocialProtection";
 import EducationInsurancePage from "./pages/EducationInsurancePage";
 import TontinePage from "./pages/Tontine";
 

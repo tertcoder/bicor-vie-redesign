@@ -23,9 +23,10 @@ export default function Footer() {
             <div>
               <h3 className="mb-4 text-xl font-bold">Contact</h3>
               <ul className="space-y-2">
-                <li>contact@bicorvie.com</li>
-                <li>+33 1 23 45 67 89</li>
-                <li>Paris, France</li>
+                <li>bicorvie@bicor.com</li>
+                <li>(+257) 22 28 08 10</li>
+                <li>(+257) 68 70 78 06</li>
+                <li>11.Av. de Grece, Bujumbura-Burundi</li>
               </ul>
             </div>
             <div>
