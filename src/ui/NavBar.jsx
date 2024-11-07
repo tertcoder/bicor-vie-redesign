@@ -66,7 +66,9 @@ function NavBar() {
             {/* Dropdown Menu for Desktop */}
             <div
               className="relative inline-block"
-              onClick={() => setDropdownOpen(!dropdownOpen)}
+              onMouseEnter={() => {
+                setDropdownOpen(true);
+              }}
             >
               <div
                 className={`flex cursor-pointer items-center ${getLinkStyle("/products")}`}
@@ -84,40 +86,38 @@ function NavBar() {
                   />
                 </svg>
               </div>
-              {dropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 overflow-hidden rounded-lg bg-white shadow-lg">
-                  <Link
-                    to="/protection-credit"
-                    className={getLinkStyle("/protection-credit", true)}
-                  >
-                    Protection Crédit
-                  </Link>
-                  <Link
-                    to="/pension"
-                    className={getLinkStyle("/pension", true)}
-                  >
-                    Pension/Retraite
-                  </Link>
-                  <Link
-                    to="/protection-social"
-                    className={getLinkStyle("/protection-social", true)}
-                  >
-                    Protection Social
-                  </Link>
-                  <Link
-                    to="/assurance-education"
-                    className={getLinkStyle("/assurance-education", true)}
-                  >
-                    Assurance Education
-                  </Link>
-                  <Link
-                    to="/tontine"
-                    className={getLinkStyle("/tontine", true)}
-                  >
-                    Tontine
-                  </Link>
-                </div>
-              )}
+              {/* hello */}
+              <div
+                className={`absolute left-0 mt-2 w-48 transform overflow-hidden rounded-lg bg-white shadow-lg duration-300 ${dropdownOpen ? "translate-y-0 opacity-100 visible" : "translate-y-4 opacity-0 invisible"}`}
+                onMouseLeave={() => {
+                  setDropdownOpen(false);
+                }}
+              >
+                <Link
+                  to="/protection-credit"
+                  className={getLinkStyle("/protection-credit", true)}
+                >
+                  Protection Crédit
+                </Link>
+                <Link to="/pension" className={getLinkStyle("/pension", true)}>
+                  Pension/Retraite
+                </Link>
+                <Link
+                  to="/protection-social"
+                  className={getLinkStyle("/protection-social", true)}
+                >
+                  Protection Social
+                </Link>
+                <Link
+                  to="/assurance-education"
+                  className={getLinkStyle("/assurance-education", true)}
+                >
+                  Assurance Education
+                </Link>
+                <Link to="/tontine" className={getLinkStyle("/tontine", true)}>
+                  Tontine
+                </Link>
+              </div>
             </div>
 
             <Link to="/publications" className={getLinkStyle("/publications")}>
@@ -154,11 +154,13 @@ function NavBar() {
             mobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
         >
-          <div className="h-full w-80 bg-neutral p-4">
-            <button
-              className="rounded-md bg-primary px-2 py-0.5 text-neutral"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+          <div
+            className="h-full w-80 bg-neutral p-4"
+            onClick={() => {
+              setMobileMenuOpen(false);
+            }}
+          >
+            <button className="rounded-md bg-primary px-2 py-0.5 text-neutral">
               <span>Fermer</span>
             </button>
             <div className="mt-4 flex flex-col space-y-4">

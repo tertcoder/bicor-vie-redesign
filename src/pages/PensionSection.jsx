@@ -1,5 +1,5 @@
 import React from 'react';
-import Photo from "../assets/4.jpg"
+import Photo from "../assets/retraite.png"
 
 const ShieldIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8">

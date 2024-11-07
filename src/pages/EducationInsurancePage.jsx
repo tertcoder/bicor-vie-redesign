@@ -67,9 +67,11 @@ const EducationInsurancePage = () => {
                 qu'il s'agisse de l'école primaire, du secondaire ou des études
                 supérieures.
               </p>
+              <a href="#plus">
               <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
-                Commencer maintenant
+                En savoir plus
               </button>
+              </a>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-lg shadow-xl">
               <img
@@ -83,7 +85,7 @@ const EducationInsurancePage = () => {
       </div>
 
       {/* How it Works Section */}
-      <div className="py-20">
+      <div className="py-20" id="plus">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Fonctionnement
