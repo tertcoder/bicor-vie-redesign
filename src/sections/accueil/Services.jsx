@@ -4,33 +4,39 @@ import PensionPhoto from "../../assets/retraite.png";
 import TontinePhoto from "../../assets/tontine-1.jpg";
 import SocialProtectionPhoto from "../../assets/social-protection.png";
 import EducationPhoto from "../../assets/education.jpg";
+import { Link } from "react-router-dom";
 export default function Services() {
   const servicesData = [
     {
+      url: "/souscrire",
       img: CreditPhoto,
       name: "Assurance Crédit",
       description:
         "Protégez vos crédits et emprunts avec une couverture adaptée en cas de difficulté de remboursement.",
     },
     {
+      url: "/souscrire",
       img: PensionPhoto,
       name: "Assurance Pension",
       description:
         "Quittez votre activité en toute sérénité avec un revenu régulier après la retraite.",
     },
     {
+      url: "/souscrire",
       img: EducationPhoto,
       name: "Assurance Éducation",
       description:
         "Offrez à vos enfants une éducation de qualité en planifiant dès aujourd'hui les dépenses futures.",
     },
     {
+      url: "/souscrire",
       img: SocialProtectionPhoto,
       name: "Assurance Protection Sociale",
       description:
         "Bénéficiez d'une couverture pour vous et votre famille face aux imprévus et aux risques de la vie.",
     },
     {
+      url: "/souscrire",
       img: TontinePhoto,
       name: "Assurance Super Tontine",
       description:
@@ -39,7 +45,10 @@ export default function Services() {
   ];
 
   return (
-    <section className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28" id="services">
+    <section
+      className="mx-auto mt-0 w-full max-w-[1240px] space-y-4 max-xl:px-4 max-[900px]:mt-28"
+      id="services"
+    >
       <div className="mb-8 flex w-full items-center gap-4">
         <svg
           width="29"
@@ -80,14 +89,16 @@ export default function Services() {
                 className="absolute bottom-0 w-full transform"
               />
               <div className="p-4">
-                <button className="relative z-50 flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
-                  <span>Préparer l'Avenir</span>
-                  <img
-                    className="-rotate-90 transform"
-                    src={ArrowIcon}
-                    alt="arrow"
-                  />
-                </button>
+                <Link to={service.url}>
+                  <button className="relative z-50 flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
+                    <span>Préparer l'Avenir</span>
+                    <img
+                      className="-rotate-90 transform"
+                      src={ArrowIcon}
+                      alt="arrow"
+                    />
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
