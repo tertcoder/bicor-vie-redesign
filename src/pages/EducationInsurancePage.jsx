@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import Photo from "../assets/education.jpg";
 import FinanceVector from "../assets/undraw_finance_re_gnv2.svg";
+import { Link } from "react-router-dom";
 
 const EducationInsurancePage = () => {
   const benefits = [
@@ -68,9 +69,9 @@ const EducationInsurancePage = () => {
                 supérieures.
               </p>
               <a href="#plus">
-              <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
-                En savoir plus
-              </button>
+                <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
+                  En savoir plus
+                </button>
               </a>
             </div>
             <div className="relative h-[400px] overflow-hidden rounded-lg shadow-xl">
@@ -249,9 +250,12 @@ const EducationInsurancePage = () => {
             enfants avec notre assurance éducation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
-              Souscrire maintenant
-            </button>
+            <Link to="/souscrire">
+              <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
+                Souscrire maintenant
+              </button>
+            </Link>
+
             <button className="rounded-full border-2 border-white px-8 py-3 font-bold transition-all hover:bg-white hover:text-primary">
               Contactez un conseiller
             </button>

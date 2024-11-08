@@ -12,6 +12,7 @@ import InsurancePage from "./pages/InsurancePage";
 import SocialProtectionSection from "./pages/SocialProtection";
 import EducationInsurancePage from "./pages/EducationInsurancePage";
 import TontinePage from "./pages/Tontine";
+import SouscriptionForm from "./forms/SouscriptionForm";
 
 function App() {
   return (
@@ -49,6 +50,10 @@ function App() {
             <Route
               path="/tontine"
               element={<TontinePage/>}
+            />
+            <Route
+              path="/souscrire"
+              element={<SouscriptionForm/>}
             />
           </Route>
         </Routes>
