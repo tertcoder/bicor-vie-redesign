@@ -97,11 +97,11 @@ const PensionSection = () => {
   const faqs = [
     {
       question: "Quand puis-je commencer à cotiser pour ma retraite?",
-      answer: "Il est recommandé de commencer dès le début de votre carrière pour maximiser les avantages à long terme.",
+      answer: "Il n'y a pas d'âge minimum pour commencer à cotiser pour votre retraite. Dès que vous avez un emploi, vous commencez à accumuler des droits, peu importe votre âge. Il est fortement conseillé de cotiser le plus tôt possible afin de maximiser vos trimestres et votre future pension. Ne laissez pas passer cette opportunité pour préparer votre avenir financier.",
     },
     {
       question: "Puis-je retirer de l'argent avant l'âge de la retraite?",
-      answer: "Cela dépend du type de régime de retraite, mais des pénalités peuvent s'appliquer pour les retraits anticipés.",
+      answer: "En règle générale, les produits d’épargne retraite sont destinés à être utilisés uniquement lors de la retraite. Toutefois, dans certaines situations exceptionnelles (invalidité, décès, surendettement, etc.), il est possible de retirer des fonds avant l'âge légal de la retraite. Il est donc essentiel de bien se renseigner sur les conditions spécifiques de chaque produit d’épargne retraite, ainsi que sur les éventuelles conséquences fiscales et financières associées à un retrait anticipé.",
     },
     {
       question: "Quels sont les avantages fiscaux pour la retraite?",

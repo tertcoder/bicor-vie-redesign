@@ -13,6 +13,7 @@ import SocialProtectionSection from "./pages/SocialProtection";
 import EducationInsurancePage from "./pages/EducationInsurancePage";
 import TontinePage from "./pages/Tontine";
 import SouscriptionForm from "./forms/SouscriptionForm";
+import ContactForm from "./forms/Contact";
 
 function App() {
   return (
@@ -54,6 +55,10 @@ function App() {
             <Route
               path="/souscrire"
               element={<SouscriptionForm/>}
+            />
+            <Route
+              path="/contact"
+              element={<ContactForm/>}
             />
           </Route>
         </Routes>

@@ -2,7 +2,7 @@ import React from 'react';
 
 const SouscriptionForm = () => {
   return (
-    <div className="max-w-2xl mx-auto py-16 font-notoFont ">
+    <div className="max-w-5xl mx-auto py-16 font-notoFont ">
       <form className="space-y-4">
         {/* Nom et prénom section */}
         <div className="mb-4">
@@ -129,7 +129,7 @@ const SouscriptionForm = () => {
         <div className="text-center mt-6">
           <button
             type="submit"
-            className="bg-primary text-white px-8 py-2 rounded hover:bg-opacity-90 transition-colors"
+            className="bg-primary text-white px-8 py-2 rounded hover:bg-opacity-90 transition-colors w-full"
           >
             Envoyer
           </button>

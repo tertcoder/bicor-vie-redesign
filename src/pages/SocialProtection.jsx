@@ -1,7 +1,7 @@
 import React from "react";
 import Photo from "../assets/people-office-work-day.jpg";
-import { ChartColumnDecreasing , Gift, HandCoins } from "lucide-react";
-
+import { ChartColumnDecreasing, Gift, HandCoins } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const SocialProtectionSection = () => {
   const protectionTypes = [
@@ -37,7 +37,12 @@ const SocialProtectionSection = () => {
                 Protection Social
               </h1>
               <p className="mb-8 text-lg text-neutral">
-              L'assurance protection sociale est un mécanisme de prévoyance qui permet à l'assuré de protéger ses proches contre les aléas de la vie, notamment le risque de décès. En cas de décès de l'assuré, un capital est versé aux bénéficiaires désignés, assurant ainsi une protection financière pour sa famille ou ses proches.
+                L'assurance protection sociale est un mécanisme de prévoyance
+                qui permet à l'assuré de protéger ses proches contre les aléas
+                de la vie, notamment le risque de décès. En cas de décès de
+                l'assuré, un capital est versé aux bénéficiaires désignés,
+                assurant ainsi une protection financière pour sa famille ou ses
+                proches.
               </p>
               <a href="#plus">
                 <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
@@ -61,8 +66,6 @@ const SocialProtectionSection = () => {
       </section>
       {/* Main Content */}
       <div className="mx-auto max-w-6xl px-4 py-12">
-      
-
         {/* Protection Types Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="plus">
           {protectionTypes.map((type, index) => (
@@ -81,9 +84,11 @@ const SocialProtectionSection = () => {
             Nos conseillers sont à votre disposition pour vous guider dans vos
             démarches de protection sociale.
           </p>
-          <button className="rounded-lg bg-primary px-8 py-3 font-notoFont text-neutral transition-opacity hover:bg-opacity-90">
-            Contactez-nous
-          </button>
+          <Link to="/contact">
+            <button className="rounded-lg bg-primary px-8 py-3 font-notoFont text-neutral transition-opacity hover:bg-opacity-90">
+              Contactez-nous
+            </button>
+          </Link>
         </div>
       </div>
     </div>

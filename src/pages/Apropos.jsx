@@ -795,15 +795,7 @@ const AboutUs = () => {
                 À propos de nous
               </h2>
               <p className="mb-6 text-lg text-textGray">
-                Chez BICOR Vie, notre mission est de garantir à chaque individu
-                une protection sociale accessible et complète. Grâce à notre
-                expertise, nous nous engageons à accompagner nos assurés à
-                travers toutes les étapes de la vie, en leur offrant des
-                solutions personnalisées en matière de sécurité financière,
-                d’épargne et de prévoyance. Nous privilégions un soutien
-                constant et des services de qualité, adaptés à la fois aux
-                particuliers et aux entreprises, pour répondre aux besoins
-                spécifiques de chacun.
+              BICOR Vie est une société spécialisée dans l'assurance vie basée à Bujumbura, Burundi. Faisant partie du groupe BICOR, qui inclut également BICOR Assurances Générales, BICOR Vie offre une gamme variée de produits d'assurance destinés à protéger financièrement les individus et leurs familles. Parmi ces produits, on trouve l'assurance Education des enfants, l'épargne retraite, protection de crédit et d'autres services connexes. La société met en avant son engagement à servir ses clients avec plus de 20 ans d'expérience dans le secteur de l'assurance. BICOR Vie vise à fournir des conseils et des services adaptés aux besoins spécifiques de chaque client. De plus, l'entreprise fait partie de plusieurs réseaux régionaux et internationaux, tels que le réseau GLOBUS et l'Organisation des Assurances Africaines (OAA).
               </p>
             </div>
           </div>
