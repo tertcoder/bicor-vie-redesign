@@ -1,114 +1,74 @@
 import React from "react";
-import Photo from "../assets/5.jpg";
+import Photo from "../assets/people-office-work-day.jpg";
+import { ChartColumnDecreasing , Gift, HandCoins } from "lucide-react";
 
-const HeartShieldIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="h-8 w-8">
-    <path
-      d="M12 2L4 6V12C4 16.4183 7.58172 20 12 20C16.4183 20 20 16.4183 20 12V6L12 2Z"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M12 7C13.6569 7 15 8.34315 15 10C15 11.6569 13.6569 13 12 13C10.3431 13 9 11.6569 9 10C9 8.34315 10.3431 7 12 7Z"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-  </svg>
-);
-
-const HeartPeopleIcon = () => (
-  <svg viewBox="0 0 24 24" fill="none" className="h-8 w-8">
-    <path
-      d="M16 6C16 8.20914 14.2091 10 12 10C9.79086 10 8 8.20914 8 6C8 3.79086 9.79086 2 12 2C14.2091 2 16 3.79086 16 6Z"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <path
-      d="M21 17C21 19.2091 19.2091 21 17 21C14.7909 21 13 19.2091 13 17C13 14.7909 14.7909 13 17 13C19.2091 13 21 14.7909 21 17Z"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-    <path
-      d="M3 17C3 19.2091 4.79086 21 7 21C9.20914 21 11 19.2091 11 17C11 14.7909 9.20914 13 7 13C4.79086 13 3 14.7909 3 17Z"
-      stroke="currentColor"
-      strokeWidth="2"
-    />
-  </svg>
-);
 
 const SocialProtectionSection = () => {
   const protectionTypes = [
     {
-      title: "Assurance maladie",
+      title: "Souscription",
       description:
-        "Couvre les frais de santé liés aux soins médicaux, hospitalisations et médicaments.",
-      icon: <HeartShieldIcon />,
+        "L’assuré sélectionne un contrat d'assurance et définit le montant du capital à verser en cas de décès. Il doit également désigner ses bénéficiaires (ayants droit).",
+      icon: <ChartColumnDecreasing />, // ShieldHeart represents protection and security.
     },
     {
-      title: "Assurance chômage",
+      title: "Paiement de la prime",
       description:
-        "Offre un revenu de remplacement aux personnes qui perdent leur emploi.",
-      icon: <HeartPeopleIcon />,
+        "En échange de la garantie offerte, l'assuré s'engage à payer une prime unique qui lui assure une couverture annuelle.",
+      icon: <Gift />, // DollarSign represents payment and financial commitment.
     },
     {
-      title: "Retraite",
+      title: "Versement du capital",
       description:
-        "Garantit un revenu pour les personnes âgées après la cessation de leur activité professionnelle.",
-      icon: <HeartShieldIcon />,
-    },
-    {
-      title: "Allocations familiales",
-      description:
-        "Aide financière pour soutenir les familles avec des enfants à charge.",
-      icon: <HeartPeopleIcon />,
-    },
-    {
-      title: "Aide sociale",
-      description:
-        "Prestations destinées aux personnes en situation de précarité ou d'exclusion sociale.",
-      icon: <HeartPeopleIcon />,
+        "En cas de décès de l’assuré, le capital est versé aux bénéficiaires désignés. Cela leur permet de faire face aux dépenses liées au deuil, de maintenir leur niveau de vie ou de régler d'éventuelles dettes.",
+      icon: <HandCoins />, // Gift represents the final payout or benefit to the beneficiaries.
     },
   ];
 
   return (
     <div className="min-h-screen bg-neutral">
       {/* Hero Section */}
-      <div className="bg-primary px-4 py-12 text-neutral md:py-20">
-        <div className="mx-auto max-w-6xl">
-          <h1 className="mb-6 text-3xl md:text-5xl">
-            Protection Social
-          </h1>
-          <p className="max-w-2xl font-notoFont text-lg md:text-xl">
-            La protection sociale comprend divers programmes et prestations
-            destinés à protéger les individus contre les risques sociaux, tels
-            que la maladie, le chômage, la vieillesse, et la maternité.
-          </p>
-        </div>
-      </div>
 
-      {/* Main Content */}
-      <div className="mx-auto max-w-6xl px-4 py-12">
-        {/* Featured Image */}
-        <div className="mb-12">
-          <div className=" h-[400px] w-full overflow-hidden rounded-lg">
-            <img
-              src={Photo}
-              alt="Social Protection"
-              className="h-full w-full object-cover"
-            />
+      <section className="bg-primary py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col items-center gap-12 lg:flex-row">
+            <div className="lg:w-1/2">
+              <h1 className="mb-6 text-4xl font-bold text-neutral sm:text-5xl">
+                Protection Social
+              </h1>
+              <p className="mb-8 text-lg text-neutral">
+              L'assurance protection sociale est un mécanisme de prévoyance qui permet à l'assuré de protéger ses proches contre les aléas de la vie, notamment le risque de décès. En cas de décès de l'assuré, un capital est versé aux bénéficiaires désignés, assurant ainsi une protection financière pour sa famille ou ses proches.
+              </p>
+              <a href="#plus">
+                <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
+                  En savoir plus
+                </button>
+              </a>
+            </div>
+            <div className="lg:w-1/2">
+              <div className="relative">
+                <div className="rounded-lg bg-primary/5 p-8">
+                  <img
+                    src={Photo}
+                    alt="Credit Protection"
+                    className="h-full w-full rounded-lg object-cover shadow-lg"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
+      {/* Main Content */}
+      <div className="mx-auto max-w-6xl px-4 py-12">
+      
 
         {/* Protection Types Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3" id="plus">
           {protectionTypes.map((type, index) => (
             <div key={index} className="p-6 transition-shadow hover:shadow-lg">
               <div className="mb-4 text-primary">{type.icon}</div>
-              <h3 className="mb-3 text-xl text-primary">
-                {type.title}
-              </h3>
+              <h3 className="mb-3 text-xl text-primary">{type.title}</h3>
               <p className="font-notoFont text-textGray">{type.description}</p>
             </div>
           ))}
@@ -116,9 +76,7 @@ const SocialProtectionSection = () => {
 
         {/* Additional Info Section */}
         <div className="mt-12 rounded-lg bg-primary/5 p-8">
-          <h2 className="mb-4 text-2xl text-primary">
-            Besoin d'assistance?
-          </h2>
+          <h2 className="mb-4 text-2xl text-primary">Besoin d'assistance?</h2>
           <p className="mb-6 font-notoFont text-textGray">
             Nos conseillers sont à votre disposition pour vous guider dans vos
             démarches de protection sociale.

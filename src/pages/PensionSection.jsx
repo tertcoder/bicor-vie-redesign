@@ -90,7 +90,7 @@ const PensionSection = () => {
     {
       title: "Économie d'impôt",
       description:
-        "Dans certains pays, les cotisations à des régimes de retraite peuvent être déductibles d'impôt, offrant des avantages fiscaux.",
+        "Économie d'impôt consiste à utiliser légalement les dispositifs fiscaux (déductions, crédits d'impôt, exonérations) pour réduire la charge fiscale d'une entreprise ou d'un particulier, tout en respectant la législation en vigueur. Contrairement à l'évasion fiscale, qui est illégale, l'objectif est d'optimiser la fiscalité en profitant des avantages légaux disponibles",
       icon: <PiggyBankIcon />,
     },
   ];

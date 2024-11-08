@@ -3,7 +3,6 @@ import heartSVG from "../assets/heart.svg";
 import Team from "../sections/accueil/Team";
 import Photo from "../assets/about.jpg";
 import Photo1 from "../assets/about.jpeg";
-
 import Actualite from "../sections/accueil/Actualite";
 const AboutUs = () => {
   return (
