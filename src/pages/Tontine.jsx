@@ -1,6 +1,7 @@
 import React from "react";
 import { Info, Users, DollarSign, Award } from "lucide-react";
 import Photo from "../assets/tontine-1.jpg";
+import { Link } from "react-router-dom";
 
 const TontinePage = () => {
   return (
@@ -103,12 +104,16 @@ const TontinePage = () => {
             votre avenir financier dès aujourd'hui.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/devit">
             <button className="rounded-md bg-secondary px-8 py-3 font-semibold text-primary transition-all hover:bg-opacity-90">
               Realiser un Devis
             </button>
+            </Link>
+            <Link to="/contact">
             <button className="rounded-md border-2 border-neutral px-8 py-3 font-semibold text-neutral transition-all hover:bg-white hover:text-primary">
               Nous Contacter
             </button>
+            </Link>
           </div>
         </div>
       </div>
