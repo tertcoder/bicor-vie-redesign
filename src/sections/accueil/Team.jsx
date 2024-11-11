@@ -26,7 +26,7 @@ export default function Team() {
           Comité de Direction
         </p>
       </div>
-      <div className="grid w-full grid-cols-3 justify-center items-center gap-12 xxs:flex-col xxs:justify-center md:flex-row md:justify-between">
+      <div className="grid w-full grid-cols-3 items-center justify-center gap-12 xxs:flex-col xxs:justify-center md:flex-row md:justify-between">
         <div className="col-span-1">
           <div className="h-[300px] w-full overflow-hidden rounded-xl">
             <img
@@ -40,33 +40,7 @@ export default function Team() {
             <p className="text-lg">DIRECTRICE GENERALE</p>
           </div>
         </div>
-        <div className="col-span-1">
-          <div className="h-[300px] w-full overflow-hidden rounded-xl">
-            <img
-              src={Photo2}
-              alt="photo"
-              className="h-full w-full object-fill"
-            />
-          </div>
-          <div className="w-full text-center">
-            <p className="text-xl font-bold">Raoul Kayuku</p>
-            <p className="text-lg">Auditeur Interne</p>
-          </div>
-        </div>
-        <div className="col-span-1">
-          <div className="h-[300px] w-full overflow-hidden rounded-xl">
-            <img
-              src={Photo3}
-              alt="photo"
-              className="h-full w-full object-fill"
-            />
-          </div>
-          <div className="w-full text-center">
-            <p className="text-xl font-bold">Eric NSHIMIRIMANA</p>
-
-            <p className="text-lg">DIRECTEUR TECHNIQUE ET FINANCIER</p>
-          </div>
-        </div>
+        
         <div className="col-span-1">
           <div className="h-[300px] w-full overflow-hidden rounded-xl">
             <img
@@ -91,7 +65,7 @@ export default function Team() {
             />
           </div>
           <div className="w-full text-center">
-            <p className="text-xl font-bold">Alexis NDAYISHIMIYE</p>
+            <p className="text-xl font-bold">Odilon GASHIRAHAMWE</p>
 
             <p className="text-lg">CHEF DE SERVICE COMMERCIAL</p>
           </div>

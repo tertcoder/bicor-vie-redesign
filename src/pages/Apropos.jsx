@@ -4,6 +4,7 @@ import Team from "../sections/accueil/Team";
 import Photo from "../assets/about.jpg";
 import Photo1 from "../assets/about.jpeg";
 import Actualite from "../sections/accueil/Actualite";
+import { Link } from "react-router-dom";
 const AboutUs = () => {
   return (
     <div>
@@ -18,9 +19,11 @@ const AboutUs = () => {
               Depuis plus de 20 ans, votre partenaire de confiance dans la
               gestion de votre avenir financier.
             </p>
+            <a href="#plus">
             <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
-              Contactez-nous
+              En savoir plus
             </button>
+            </a>
           </div>
           <div className="lg:w-1/2">
             <div className="h-80 rounded-lg bg-neutral/10 p-4">
@@ -35,7 +38,7 @@ const AboutUs = () => {
       </header>
 
       {/* About Section */}
-      <section id="about" className="bg-neutral py-20">
+      <section id="plus" className="bg-neutral py-20">
         <div className="container mx-auto px-4">
           <h2 className="mb-12 text-center text-3xl font-bold text-primary">
             Pourquoi choisir Bicor Vie ?
@@ -795,12 +798,26 @@ const AboutUs = () => {
                 À propos de nous
               </h2>
               <p className="mb-6 text-lg text-textGray">
-              BICOR Vie est une société spécialisée dans l'assurance vie basée à Bujumbura, Burundi. Faisant partie du groupe BICOR, qui inclut également BICOR Assurances Générales, BICOR Vie offre une gamme variée de produits d'assurance destinés à protéger financièrement les individus et leurs familles. Parmi ces produits, on trouve l'assurance Education des enfants, l'épargne retraite, protection de crédit et d'autres services connexes. La société met en avant son engagement à servir ses clients avec plus de 20 ans d'expérience dans le secteur de l'assurance. BICOR Vie vise à fournir des conseils et des services adaptés aux besoins spécifiques de chaque client. De plus, l'entreprise fait partie de plusieurs réseaux régionaux et internationaux, tels que le réseau GLOBUS et l'Organisation des Assurances Africaines (OAA).
+                BICOR Vie est une société spécialisée dans l'assurance vie basée
+                à Bujumbura, Burundi. Faisant partie du groupe BICOR, qui inclut
+                également BICOR Assurances Générales, BICOR Vie offre une gamme
+                variée de produits d'assurance destinés à protéger
+                financièrement les individus et leurs familles. Parmi ces
+                produits, on trouve l'assurance Education des enfants, l'épargne
+                retraite, protection de crédit et d'autres services connexes. La
+                société met en avant son engagement à servir ses clients avec
+                plus de 20 ans d'expérience dans le secteur de l'assurance.
+                BICOR Vie vise à fournir des conseils et des services adaptés
+                aux besoins spécifiques de chaque client. De plus, l'entreprise
+                fait partie de plusieurs réseaux régionaux et internationaux,
+                tels que le réseau GLOBUS et l'Organisation des Assurances
+                Africaines (OAA).
               </p>
             </div>
           </div>
         </div>
       </div>
+      <Team />
 
       {/* Call to Action Section */}
       <section className="bg-primary py-20 text-neutral">
@@ -812,12 +829,13 @@ const AboutUs = () => {
             Rejoignez-nous chez Bicor Vie et bâtissons ensemble un avenir serein
             et prospère !
           </p>
-          <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
-            Contactez-nous dès aujourd'hui !
-          </button>
+          <Link to="/contact">
+            <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
+              Contactez-nous dès aujourd'hui !
+            </button>
+          </Link>
         </div>
       </section>
-
       {/* Footer */}
     </div>
   );
