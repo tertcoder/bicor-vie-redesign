@@ -11,7 +11,7 @@ const TontinePage = () => {
           <div className="grid items-center gap-8 md:grid-cols-2">
             <div>
               <h1 className="mb-6 text-4xl font-bold md:text-5xl">
-                Tontine Insurance
+              Assurance Tontine
               </h1>
               <p className="mb-8 text-lg">
                 Participez à une approche collective de l'épargne avec notre
