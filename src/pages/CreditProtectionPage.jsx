@@ -1,5 +1,6 @@
 import React from "react";
 import Photo from "../assets/about.jpeg";
+import { Link } from "react-router-dom";
 
 const CreditProtectionPage = () => {
   return (
@@ -189,9 +190,11 @@ const CreditProtectionPage = () => {
               sécuriser un emprunt et assurer la tranquillité d'esprit face aux
               imprévus.
             </p>
+            <Link to="/devit">
             <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
               Demander un devis
             </button>
+            </Link>
           </div>
         </section>
       </main>

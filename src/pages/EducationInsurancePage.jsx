@@ -120,9 +120,37 @@ const EducationInsurancePage = () => {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg p-6">
-              <img src={FinanceVector} alt="vector" />
-            </div>
+            <div className="rounded-lg bg-white p-6 shadow-lg">
+              <div className="space-y-4">
+                <h3 className="mb-4 text-xl font-bold">
+                  Simulateur de cotisation
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <label className="mb-2 block text-sm font-medium">
+                      Âge de l'enfant
+                    </label>
+                    <input
+                      type="number"
+                      className="w-full rounded-lg border px-4 py-2 focus:border-primary focus:outline-none"
+                    />
+                  </div>
+                  <div>
+                    <label className="mb-2 block text-sm font-medium">
+                      Durée d'épargne souhaitée
+                    </label>
+                    <select className="w-full rounded-lg border px-4 py-2 focus:border-primary focus:outline-none">
+                      <option>5 ans</option>
+                      <option>10 ans</option>
+                      <option>15 ans</option>
+                    </select>
+                  </div>
+                  <button className="w-full rounded-lg bg-primary px-6 py-3 text-white transition-all hover:bg-opacity-90">
+                    Calculer ma cotisation
+                  </button>
+                </div>
+              </div>
+              </div>
           </div>
         </div>
       </div>
