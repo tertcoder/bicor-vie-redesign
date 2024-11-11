@@ -16,6 +16,8 @@ import SouscriptionForm from "./forms/SouscriptionForm";
 import ContactForm from "./forms/Contact";
 import Actualite from "./sections/accueil/Actualite";
 import Actu from "./pages/Actu";
+import NosAgences from "./pages/agences";
+import Devit from "./forms/devit";
 
 function App() {
   return (
@@ -65,6 +67,14 @@ function App() {
              <Route
               path="/actu"
               element={<Actu/>}
+            />
+             <Route
+              path="/agences"
+              element={<NosAgences/>}
+            />
+            <Route
+              path="/devit"
+              element={<Devit/>}
             />
           </Route>
         </Routes>

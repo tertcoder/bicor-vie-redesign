@@ -142,9 +142,11 @@ function NavBar() {
                 <span className="block h-0.5 w-3 rounded-full bg-neutral"></span>
               </div>
             </button>
-            <button className="rounded-xl bg-primary p-4 font-semibold text-neutral max-lg:hidden">
+            <Link to="/devit">
+           <button className="mt-4 w-full rounded-xl bg-primary p-4 font-semibold text-neutral">
               Realiser un Devis
             </button>
+           </Link>
           </div>
         </div>
 
@@ -229,9 +231,11 @@ function NavBar() {
                 Contact
               </Link>
             </div>
-            <button className="mt-4 w-full rounded-xl bg-primary p-4 font-semibold text-neutral">
+           <Link to="/devit">
+           <button className="mt-4 w-full rounded-xl bg-primary p-4 font-semibold text-neutral">
               Realiser un Devis
             </button>
+           </Link>
           </div>
         </div>
 
