@@ -24,7 +24,7 @@ const DevisForm = () => {
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg py-16">
       <h1 className="text-2xl font-libreFont text-primary mb-8">
-        Formulaire de Devis d'Assurance Vie
+        Formulaire de Devis d'Assurance
       </h1>
       
       <form onSubmit={handleSubmit} className="space-y-8">
