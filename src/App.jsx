@@ -14,6 +14,8 @@ import EducationInsurancePage from "./pages/EducationInsurancePage";
 import TontinePage from "./pages/Tontine";
 import SouscriptionForm from "./forms/SouscriptionForm";
 import ContactForm from "./forms/Contact";
+import Actualite from "./sections/accueil/Actualite";
+import Actu from "./pages/Actu";
 
 function App() {
   return (
@@ -59,6 +61,10 @@ function App() {
             <Route
               path="/contact"
               element={<ContactForm/>}
+            />
+             <Route
+              path="/actu"
+              element={<Actu/>}
             />
           </Route>
         </Routes>

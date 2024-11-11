@@ -801,7 +801,6 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <Actualite />
 
       {/* Call to Action Section */}
       <section className="bg-primary py-20 text-neutral">

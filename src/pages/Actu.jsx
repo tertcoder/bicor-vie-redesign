@@ -1,17 +1,15 @@
-import { motion, useAnimationControls } from "framer-motion";
-import Img from "../../assets/img-20241011-wa0017.jpg";
-import ProgressUi from "../../ui/ProgressUi";
+import Img from "../assets/dfdfd.jpg";
+import Actualite from "../sections/accueil/Actualite";
+import ProgressUi from "../ui/ProgressUi";
 import React from "react";
-import utls from "../../utls"; // Assume 'utls' is an array of blog data with 'photo', 'title', and 'date'
+import utls from "../utls"; // Assume 'utls' is an array of blog data with 'photo', 'title', and 'date'
 import { Link } from "react-router-dom";
-
-export default function Actualite() {
+import { motion, useAnimationControls } from "framer-motion";
+export default function Actu() {
   const controls = useAnimationControls();
   const containerRef = React.useRef(null);
   const [cardWidth, setCardWidth] = React.useState(0);
   const [maxScroll, setMaxScroll] = React.useState(0);
-
-  // Set card width and max scroll distance
   React.useEffect(() => {
     const calculateDimensions = () => {
       if (containerRef.current) {
@@ -57,68 +55,54 @@ export default function Actualite() {
   }, [maxScroll, controls, cardWidth]);
 
   return (
-    <div className="min-h-screen w-full bg-textGray py-20 xxs:px-4 lg:px-0">
-      <div className="mx-auto max-w-[1300px] space-y-8">
-        <div className="flex w-full items-center gap-4">
-          <svg
-            width="29"
-            height="30"
-            viewBox="0 0 29 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <rect
-              x="14.3701"
-              y="0.859619"
-              width="20"
-              height="20"
-              transform="rotate(45.9311 14.3701 0.859619)"
-              fill="white"
+    <>
+      <div>
+        <div className="bg-news flex min-h-[450px] w-full items-center justify-center">
+          <div className="rounded-lg bg-primary/70 p-4">
+            <h1 className="text-center text-4xl font-bold text-white">
+              Découvre nos Actualités
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div className="mx-auto max-w-[1300px] py-16">
+        <div className="space-y-8">
+          <p className="text-lg opacity-80">Actualités | 1min de lecture</p>
+          <h1 className="font-serif text-4xl font-bold">
+            Passation de Pouvoir à la Direction Générale de BICOR Vie &
+            Capitalisation
+          </h1>
+
+          <p className="space-y-4 text-justify font-serif text-xl leading-10 first-letter:text-4xl">
+            <img
+              src={Img}
+              alt="photo"
+              className="float-left mb-2 mr-4 max-w-xl rounded shadow-md"
             />
-          </svg>
-          <p className="text-[32px] font-bold text-neutral">Actualité</p>
+            Bujumbura, le 10 octobre 2024 – BICOR Vie & Capitalisation, l’une
+            des principales compagnies d'assurance du Burundi, entre dans une
+            nouvelle ère avec la passation de pouvoir entre Monsieur Willy
+            Fabrice NDAYISABA et Madame Mireille NIYONKURU. Après trois ans et
+            trois mois de service à la tête de BICOR, Monsieur NDAYISABA a
+            officiellement transféré ses responsabilités lors d'une cérémonie
+            tenue au siège social de l'entreprise à Bujumbura, en présence de
+            dignitaires, dont le Président du Conseil d’Administration de BICOR
+            Vie & Capitalisation ainsi que celui de BICOR Assurance Général. Cet
+            événement, marqué par une ambiance empreinte de sérénité et de
+            confiance, a témoigné de l'importance de cette transition au sein de
+            la direction. En prenant ses fonctions, Madame Mireille NIYONKURU a
+            réaffirmé son engagement à poursuivre le développement de BICOR et à
+            renforcer sa position sur le marché des assurances. Forte de son
+            expertise dans le domaine, elle apportera un nouveau souffle à notre
+            développement. L’ensemble des collaborateurs de BICOR Vie lui
+            souhaite la bienvenue et se réjouit de travailler à ses côtés pour
+            continuer d’élever notre entreprise vers de nouveaux sommets. Nous
+            vous invitons à suivre cette nouvelle étape prometteuse et à rester
+            connectés avec nous pour les évolutions à venir.
+          </p>
         </div>
-        <div className="flex w-full overflow-hidden rounded-b-3xl rounded-t-lg">
-          <div className="w-full max-w-xl overflow-hidden bg-white">
-            <img src={Img} alt="photo" className="h-full w-full" />
-          </div>
-
-          <div className="flex w-full flex-1 items-center justify-center space-y-4 bg-white p-8">
-            <div className="space-y-6">
-              <div className="flex w-full items-start justify-between">
-                <div className="w-full">
-                  <p className="text-3xl font-bold text-textGray">
-                    Passation de Pouvoir à la Direction Générale de BICOR Vie &
-                    Capitalisation
-                  </p>
-                </div>
-                <div>
-                  <p className="font-semibold text-textGray/70">
-                    13 Octobre 2024
-                  </p>
-                </div>
-              </div>
-              <div>
-                <p className="text-xl text-textGray">
-                  Bujumbura, le 10 octobre 2024 – BICOR Vie & Capitalisation,
-                  l'une des principales compagnies d'assurance du Burundi, entre
-                  dans une nouvelle ère avec la passation de pouvoir entre
-                  Monsieur Willy F.
-                </p>
-               <div className="mt-4">
-               <Link to="/actu" className="mt-4">
-                  <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
-                    <span>En savoir plus</span>
-                  </button>
-                </Link>
-               </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Carousel for blog items */}
-        <div className="overflow-hidden" ref={containerRef}>
+        <div className="mt-14 overflow-hidden" ref={containerRef}>
+          <h1 className="font-serif text-4xl font-bold">Nos Archives</h1>
           <motion.div
             className="flex items-baseline gap-8 py-4"
             animate={controls}
@@ -155,6 +139,6 @@ export default function Actualite() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

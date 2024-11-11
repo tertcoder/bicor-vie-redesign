@@ -73,28 +73,7 @@ export default function PourquoiSouscrire() {
         </svg>
       ),
     },
-    {
-      id: 4,
-      title: "Assurance maladie",
-      description:
-        "Cela vous protège contre les frais médicaux imprévus, réduisant le stress financier lié aux soins de santé.",
-      svgIcon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="2"
-          stroke="currentColor"
-          className="h-8 w-8"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 8v8m-4-4h8"
-          />
-        </svg>
-      ),
-    },
+
     {
       id: 5,
       title: "Accompagnement et conseils",
@@ -180,7 +159,7 @@ export default function PourquoiSouscrire() {
         </div>
 
         {/* Advantages Section */}
-        <div className="mx-auto grid max-w-[1300px] gap-6 p-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto grid max-w-[1300px] gap-6 px-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-20">
           {advantages.map((advantage) => (
             <div
               key={advantage.id}

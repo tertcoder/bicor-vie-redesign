@@ -36,6 +36,11 @@ body {
   background: url(./assets/epargne-retraite26.jpg);
   background-size: cover;
 }
+.bg-news{
+  background: url(./assets/news.avif);
+  background-size: cover;
+  background-position: center;
+}
 .bg-service-3{
   background: url(./assets/tontine-1.jpg);
   background-size: cover;
@@ -43,7 +48,7 @@ body {
 }
 
 .bg-insurance{
-  background: url(./assets/0.jpg);
+  background: url(./assets/parents-spending-time-with-their-little-daughter-home.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -54,7 +59,7 @@ body {
   background-position: center;
 }
 .bg-education{
-  background: url(./assets/2.jpg);
+  background: url(./assets/education.jpg);
   background-size: cover;
   background-position: center;
 }

@@ -74,6 +74,20 @@ const SouscriptionForm = () => {
           </div>
         </div>
 
+
+{/* matricule section */}
+<div className="mb-4">
+          <label className="block text-textGray text-sm mb-2">
+          matricule *
+          </label>
+          <input
+            type="text"
+            className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-primary"
+            required
+          />
+        </div>
+
+
         {/* Address section */}
         <div className="mb-4">
           <label className="block text-textGray text-sm mb-2">
@@ -88,7 +102,7 @@ const SouscriptionForm = () => {
 
         {/* Additional fields */}
         <div className="space-y-4">
-          {['Ville *', 'N° CIN *', 'Téléphone *', 'Profession *', 'Religion *', 'Niveau d\'études *'].map((label) => (
+          {['Ville *', 'N° CIN *', 'Téléphone *', 'Employeur *', "Montant en Bif", 'Profession *', 'Religion *', 'Niveau d\'études *'].map((label) => (
             <div key={label} className="mb-4">
               <label className="block text-textGray text-sm mb-2">
                 {label}
@@ -100,6 +114,29 @@ const SouscriptionForm = () => {
               />
             </div>
           ))}
+        </div>
+
+          {/* Periodicite section */}
+        <div className="mb-4">
+          <label className="block text-textGray text-sm mb-2">Périodicité *</label>
+          <div className="flex gap-4">
+            <label className="flex items-center">
+              <input type="radio" name="gender" className="mr-2" required />
+              <span>mois</span>
+            </label>
+            <label className="flex items-center">
+              <input type="radio" name="gender" className="mr-2" />
+              <span>Trimestre</span>
+            </label>
+            <label className="flex items-center">
+              <input type="radio" name="gender" className="mr-2" />
+              <span>Semestre</span>
+            </label>
+            <label className="flex items-center">
+              <input type="radio" name="gender" className="mr-2" />
+              <span>Annuelle</span>
+            </label>
+          </div>
         </div>
 
         {/* Status section */}

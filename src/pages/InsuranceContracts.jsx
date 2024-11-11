@@ -57,37 +57,37 @@ const InsuranceContracts = () => {
   const contracts = [
     {
       id: 1,
-      title: "Assurance Vie",
+      title: "Assurance Protection Crédit",
       description:
-        "Ce contrat vise à garantir un capital ou une rente à un bénéficiaire désigné en cas de décès de l'assuré. Il peut également inclure des options de capitalisation pour une épargne à long terme.",
+        "La protection crédit est un type d'assurance qui sécurise le remboursement d'un prêt en cas de circonstances imprévues.",
       Icon: LifeInsuranceIcon,
     },
     {
       id: 2,
-      title: "Assurance Crédit",
+      title: "Assurance Pension/Retraite",
       description:
-        "Destinée à sécuriser le remboursement d'un crédit en cas de décès ou d'invalidité de l'emprunteur. Cela permet de protéger les proches des conséquences financières d'un prêt non remboursé.",
+        "La pension ou retraite est un aspect crucial de la planification financière. Voici un aperçu de son importance et des types de produits associés.",
       Icon: CreditInsuranceIcon,
     },
     {
       id: 3,
-      title: "Assurance Éducation",
+      title: "Assurance Protection Social",
       description:
-        "Ce type de contrat est conçu pour aider à financer l'éducation des enfants. Il permet d'épargner régulièrement en vue de couvrir les frais scolaires ou universitaires futurs.",
+        "L'assurance protection sociale est un mécanisme de prévoyance qui permet à l'assuré de protéger ses proches contre les aléas de la vie, notamment le risque de décès. En cas de décès de l'assuré, un capital est versé aux bénéficiaires désignés, assurant ainsi une protection financière pour sa famille ou ses proches.",
       Icon: EducationInsuranceIcon,
     },
     {
       id: 4,
-      title: "Tontine",
+      title: "Assurance Education",
       description:
-        "Un contrat d'assurance où les participants cotisent dans un fonds commun. À la fin d'une période déterminée, les fonds sont redistribués aux participants restants, souvent avec un bonus.",
+        "L'assurance éducation permet aux parents d'épargner de manière régulière pour les frais d'éducation futurs de leurs enfants, qu'il s'agisse de l'école primaire, du secondaire ou des études supérieures.",
       Icon: TontineIcon,
     },
     {
       id: 5,
-      title: "Assurance Maladie",
+      title: "Assurance Tontine",
       description:
-        "Ce contrat couvre les frais médicaux en cas de maladie ou d'accident. Il prend en charge les consultations, les médicaments, les examens et les soins hospitaliers.",
+        "La tontine consiste en un groupe de personnes qui cotisent régulièrement dans un fonds commun. À la fin d'une période déterminée, les fonds sont redistribués aux participants restants, souvent avec un bonus",
       Icon: HealthInsuranceIcon,
     },
   ];

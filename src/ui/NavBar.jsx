@@ -120,7 +120,7 @@ function NavBar() {
               </div>
             </div>
 
-            <Link to="/publications" className={getLinkStyle("/publications")}>
+            <Link to="/actu" className={getLinkStyle("/actu")}>
               Publications
             </Link>
             <Link to="/agences" className={getLinkStyle("/agences")}>
@@ -217,8 +217,8 @@ function NavBar() {
               </div>
 
               <Link
-                to="/publications"
-                className={getLinkStyle("/publications")}
+                to="/actu"
+                className={getLinkStyle("/actu")}
               >
                 Publications
               </Link>

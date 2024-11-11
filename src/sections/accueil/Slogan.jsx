@@ -1,5 +1,6 @@
 import LifeInsurancePhoto from "../../assets/life-insurance13.jpg";
 import ArrowIcon from "../../assets/arrow.svg";
+import { Link } from "react-router-dom";
 
 export default function Slogan() {
   return (
@@ -14,10 +15,13 @@ export default function Slogan() {
           les niveaux, des directions aux employés, avec des solutions sur
           mesure pour optimiser vos relations d’affaires.
         </p>
-        <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
-          <span>Préparer l'Avenir</span>
-          <img className="-rotate-90 transform" src={ArrowIcon} alt="arrow" />
-        </button>
+        <br />
+        <Link to="/souscrire" className="mt-4">
+          <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
+            <span>Préparer l'Avenir</span>
+            <img className="-rotate-90 transform" src={ArrowIcon} alt="arrow" />
+          </button>
+        </Link>
       </div>
 
       <img

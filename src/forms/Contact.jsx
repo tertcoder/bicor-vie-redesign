@@ -1,12 +1,15 @@
 export default function ContactForm() {
   return (
-    <div className="h-screen w-full">
-      <div className="bg-pourquoi h-80 w-full"/>
-      <div className="h-screen my-20">
-        <form class="mx-auto  w-full max-w-5xl rounded-lg bg-neutral p-8">
+    <div className="h-screen min-h-screen w-full">
+      <div className="bg-pourquoi w-full" />
+      <div className="my-20 h-screen">
+        <form class="mx-auto w-full max-w-5xl rounded-lg bg-neutral p-8">
+          <div className="pb-8 text-xl font-bold">
+            <h1>Veuillez entrer les informations suivantes</h1>
+          </div>
           <div class="mb-6">
             <label for="fullName" class="mb-2 block font-medium text-textGray">
-              Full Name *
+              Nom et Prenom *
             </label>
             <input
               type="text"
@@ -19,7 +22,7 @@ export default function ContactForm() {
 
           <div class="mb-6">
             <label for="email" class="mb-2 block font-medium text-textGray">
-              Email Address *
+              Email *
             </label>
             <input
               type="email"
@@ -32,7 +35,7 @@ export default function ContactForm() {
 
           <div class="mb-6">
             <label for="phone" class="mb-2 block font-medium text-textGray">
-              Phone
+              Numero de telephone (facultatif)
             </label>
             <input
               type="tel"
@@ -47,7 +50,7 @@ export default function ContactForm() {
               for="companyName"
               class="mb-2 block font-medium text-textGray"
             >
-              Company Name *
+              Nom de l'entreprise (facultatif)
             </label>
             <input
               type="text"
@@ -60,7 +63,7 @@ export default function ContactForm() {
 
           <div class="mb-6">
             <label for="message" class="mb-2 block font-medium text-textGray">
-              Your Message *
+              Votre message *
             </label>
             <textarea
               id="message"
@@ -73,9 +76,9 @@ export default function ContactForm() {
 
           <button
             type="submit"
-            class="rounded-md bg-primary px-6 py-3 font-medium text-neutral transition-colors duration-300 hover:bg-secondary w-full"
+            class="w-full rounded-md bg-primary px-6 py-3 font-medium text-neutral transition-colors duration-300 hover:bg-secondary"
           >
-            Send Message
+            envoyer
           </button>
         </form>
       </div>

@@ -17,5 +17,21 @@ const utls = [
     title: "A qui s'adresse-t-il l’épargne retraite ?",
     photo: Photo3,
   },
+  {
+    date: "14 Octobre 2024",
+    title: "Comment ça marche l’assurance Éducation ?",
+    photo: Photo1,
+  },
+  {
+    date: "14 Octobre 2024",
+    title: "Quelles sont les garanties offertes par assurance super tontine",
+    photo: Photo2,
+  },
+  {
+    date: "14 Octobre 2024",
+    title: "A qui s'adresse-t-il l’épargne retraite ?",
+    photo: Photo3,
+  },
+  
 ];
 export default utls;
