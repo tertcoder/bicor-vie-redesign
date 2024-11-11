@@ -19,7 +19,7 @@ const CreditProtectionPage = () => {
                   remboursement d'un prêt en cas de circonstances imprévues.
                 </p>
                 <a href="#plus">
-                  <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-neutral transition-colors hover:bg-opacity-90">
+                  <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
                     En savoir plus
                   </button>
                 </a>
