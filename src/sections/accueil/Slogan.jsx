@@ -16,7 +16,7 @@ export default function Slogan() {
           mesure pour optimiser vos relations d’affaires.
         </p>
         <br />
-        <Link to="/souscrire" className="mt-4">
+        <Link to="/devit" className="mt-4">
           <button className="flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
             <span>Préparer l'Avenir</span>
             <img className="-rotate-90 transform" src={ArrowIcon} alt="arrow" />

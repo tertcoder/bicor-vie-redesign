@@ -1,5 +1,6 @@
 import React from "react";
 import Photo from "../assets/retraite.png";
+import { Link } from "react-router-dom";
 
 const ShieldIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" className="h-8 w-8">
@@ -97,15 +98,18 @@ const PensionSection = () => {
   const faqs = [
     {
       question: "Quand puis-je commencer à cotiser pour ma retraite?",
-      answer: "Il n'y a pas d'âge minimum pour commencer à cotiser pour votre retraite. Dès que vous avez un emploi, vous commencez à accumuler des droits, peu importe votre âge. Il est fortement conseillé de cotiser le plus tôt possible afin de maximiser vos trimestres et votre future pension. Ne laissez pas passer cette opportunité pour préparer votre avenir financier.",
+      answer:
+        "Il n'y a pas d'âge minimum pour commencer à cotiser pour votre retraite. Dès que vous avez un emploi, vous commencez à accumuler des droits, peu importe votre âge. Il est fortement conseillé de cotiser le plus tôt possible afin de maximiser vos trimestres et votre future pension. Ne laissez pas passer cette opportunité pour préparer votre avenir financier.",
     },
     {
       question: "Puis-je retirer de l'argent avant l'âge de la retraite?",
-      answer: "En règle générale, les produits d’épargne retraite sont destinés à être utilisés uniquement lors de la retraite. Toutefois, dans certaines situations exceptionnelles (invalidité, décès, surendettement, etc.), il est possible de retirer des fonds avant l'âge légal de la retraite. Il est donc essentiel de bien se renseigner sur les conditions spécifiques de chaque produit d’épargne retraite, ainsi que sur les éventuelles conséquences fiscales et financières associées à un retrait anticipé.",
+      answer:
+        "En règle générale, les produits d’épargne retraite sont destinés à être utilisés uniquement lors de la retraite. Toutefois, dans certaines situations exceptionnelles (invalidité, décès, surendettement, etc.), il est possible de retirer des fonds avant l'âge légal de la retraite. Il est donc essentiel de bien se renseigner sur les conditions spécifiques de chaque produit d’épargne retraite, ainsi que sur les éventuelles conséquences fiscales et financières associées à un retrait anticipé.",
     },
     {
       question: "Quels sont les avantages fiscaux pour la retraite?",
-      answer: "Les cotisations sont souvent déductibles d'impôt, offrant un avantage fiscal immédiat et augmentant les économies.",
+      answer:
+        "Les cotisations sont souvent déductibles d'impôt, offrant un avantage fiscal immédiat et augmentant les économies.",
     },
   ];
 
@@ -115,7 +119,7 @@ const PensionSection = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col items-center gap-12 lg:flex-row">
             <div className="lg:w-1/2">
-              <h1 className="mb-6 text-4xl font-bold text-neutral sm:text-5xl">
+              <h1 className="mb-6 text-4xl font-bold text-white sm:text-5xl">
                 Pension/Retraite
               </h1>
               <p className="mb-8 text-lg text-neutral">
@@ -124,7 +128,7 @@ const PensionSection = () => {
                 produits associés.
               </p>
               <a href="#plus">
-                <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-neutral transition-colors hover:bg-opacity-90">
+                <button className="rounded-lg bg-secondary px-8 py-3 font-bold text-primary transition-colors hover:bg-opacity-90">
                   En savoir plus
                 </button>
               </a>
@@ -158,7 +162,9 @@ const PensionSection = () => {
                 key={index}
                 className="rounded-lg border border-primary/10 bg-neutral p-8 shadow-lg"
               >
-                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">{benefit.icon}</div>
+                <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
+                  {benefit.icon}
+                </div>
                 <h3 className="mb-3 text-xl text-primary">{benefit.title}</h3>
                 <p className="text-textGray">{benefit.description}</p>
               </div>
@@ -172,7 +178,7 @@ const PensionSection = () => {
           </h2>
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <div key={index} className="p-4 bg-gray-100 rounded-lg">
+              <div key={index} className="rounded-lg bg-gray-100 p-4">
                 <h4 className="font-semibold">{faq.question}</h4>
                 <p className="mt-2 text-gray-700">{faq.answer}</p>
               </div>
@@ -180,9 +186,31 @@ const PensionSection = () => {
           </div>
         </section>
 
-
         {/* CTA Section */}
-       
+        {/* CTA Section */}
+      </div>
+      <div className="bg-primary py-16 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="mb-6 text-3xl font-bold">
+            Préparez votre avenir avec notre assurance pension
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl">
+            Commencez dès aujourd'hui à construire un avenir brillant pour votre
+            retraite avec notre assurance pension.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/souscrire">
+              <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
+                Souscrire maintenant
+              </button>
+            </Link>
+            <Link to="/contact">
+              <button className="rounded-full border-2 border-white px-8 py-3 font-bold transition-all hover:bg-white hover:text-primary">
+                Contactez un conseiller
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );

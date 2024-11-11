@@ -278,15 +278,12 @@ const EducationInsurancePage = () => {
             enfants avec notre assurance éducation.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/souscrire">
-              <button className="rounded-full bg-secondary px-8 py-3 font-bold text-primary transition-all hover:bg-opacity-90">
-                Souscrire maintenant
-              </button>
-            </Link>
-
+            
+            <Link to="/contact">
             <button className="rounded-full border-2 border-white px-8 py-3 font-bold transition-all hover:bg-white hover:text-primary">
               Contactez un conseiller
             </button>
+            </Link>
           </div>
         </div>
       </div>

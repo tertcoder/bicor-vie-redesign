@@ -89,7 +89,7 @@ export default function Services() {
                 className="absolute bottom-0 w-full transform"
               />
               <div className="p-4">
-                <Link to={service.url}>
+                <Link to="/devit">
                   <button className="relative z-50 flex items-center gap-3 rounded-xl bg-secondary px-4 py-3 text-lg font-semibold text-neutral">
                     <span>Préparer l'Avenir</span>
                     <img
