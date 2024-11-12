@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  text-align: justify;
+}
 .linkStyle {
   @apply text-lg duration-150;
 }
