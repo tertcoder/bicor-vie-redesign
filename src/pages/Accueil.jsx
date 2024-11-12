@@ -16,7 +16,7 @@ function Accueil() {
         <Slogan />
         <Actualite />
         <Team />
-        <Patners />
+        {/* <Patners /> */}
       </div>
     </>
   );

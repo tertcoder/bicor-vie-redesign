@@ -52,7 +52,7 @@ export default function Team() {
           <div className="w-full text-center">
             <p className="text-xl font-bold">Eric NSHIMIRIMANA</p>
 
-            <p className="text-lg">DIRECTEUR TECHNIQUE ET FINANCIER</p>
+            <p className="text-lg">CHEF DU SERVICE TECHNIQUE</p>
           </div>
         </div>
 
@@ -66,10 +66,11 @@ export default function Team() {
           </div>
           <div className="w-full text-center">
             <p className="text-xl font-bold">Odilon GASHIRAHAMWE</p>
-
-            <p className="text-lg">CHEF DE SERVICE COMMERCIAL</p>
+            <p className="text-lg">CHEF DU SERVICE COMMERCIAL</p>
           </div>
         </div>
+
+        
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ export default function Services() {
       img: CreditPhoto,
       name: "Assurance Crédit",
       description:
-        "Protégez vos crédits et emprunts avec une couverture adaptée en cas de difficulté de remboursement.",
+        "Une assurance qui protège le créancier contre le risque de non-paiement des créances en indemnisant en cas de défaut de paiement du débiteur.",
     },
     {
       url: "/souscrire",
