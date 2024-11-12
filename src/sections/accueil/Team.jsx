@@ -36,23 +36,8 @@ export default function Team() {
             />
           </div>
           <div className="w-full text-center">
-            <p className="text-xl font-bold"> Niyonkuru Mireille</p>
+            <p className="text-xl pt-4 font-bold"> Niyonkuru Mireille</p>
             <p className="text-lg">DIRECTRICE GENERALE</p>
-          </div>
-        </div>
-        
-        <div className="col-span-1">
-          <div className="h-[300px] w-full overflow-hidden rounded-xl">
-            <img
-              src={Photo3}
-              alt="photo"
-              className="h-full w-full object-fill"
-            />
-          </div>
-          <div className="w-full text-center">
-            <p className="text-xl font-bold">Eric NSHIMIRIMANA</p>
-
-            <p className="text-lg">CHEF DU SERVICE TECHNIQUE</p>
           </div>
         </div>
 
@@ -65,12 +50,39 @@ export default function Team() {
             />
           </div>
           <div className="w-full text-center">
-            <p className="text-xl font-bold">Odilon GASHIRAHAMWE</p>
-            <p className="text-lg">CHEF DU SERVICE COMMERCIAL</p>
+            <p className="text-xl pt-4 font-bold">Alexis NDAYISHIMIYE</p>
+            <p className="text-lg">DIRECTEUR TECHNIQUE ET FINANCIER</p>
           </div>
         </div>
 
-        
+        <div className="col-span-1">
+          <div className="h-[300px] w-full overflow-hidden rounded-xl">
+            <img
+              src={Photo3}
+              alt="photo"
+              className="h-full w-full object-fill"
+            />
+          </div>
+          <div className="w-full text-center">
+            <p className="text-xl pt-4 font-bold">Eric NSHIMIRIMANA</p>
+
+            <p className="text-lg">CHEF DU SERVICE TECHNIQUE</p>
+          </div>
+        </div>
+
+        <div className="col-span-1">
+          <div className="h-[300px] bg-gray-300 w-full overflow-hidden rounded-xl">
+            {/* <img
+              src={Photo4}
+              alt="photo"
+              className="h-full w-full object-fill"
+            /> */}
+          </div>
+          <div className="w-full text-center">
+            <p className="text-xl pt-4 font-bold">Odilon GASHIRAHAMWE</p>
+            <p className="text-lg">CHEF DU SERVICE COMMERCIAL</p>
+          </div>
+        </div>
       </div>
     </div>
   );
