@@ -2,6 +2,7 @@ import Photo1 from "../../assets/about.jpg";
 import Photo2 from "../../assets/IMG-20241027-WA0041.jpg";
 import Photo3 from "../../assets/chef-de-service-commercial.jpg";
 import Photo4 from "../../assets/directeur_technique.jpg";
+import Photo5 from "../../assets/odilon.jpg";
 export default function Team() {
   return (
     <div className="mx-auto my-16 w-full max-w-[1300px] space-y-8 xxs:px-4 lg:px-0">
@@ -72,11 +73,11 @@ export default function Team() {
 
         <div className="col-span-1">
           <div className="h-[300px] bg-gray-300 w-full overflow-hidden rounded-xl">
-            {/* <img
-              src={Photo4}
+            <img
+              src={Photo5}
               alt="photo"
               className="h-full w-full object-fill"
-            /> */}
+            />
           </div>
           <div className="w-full text-center">
             <p className="text-xl pt-4 font-bold">Odilon GASHIRAHAMWE</p>
